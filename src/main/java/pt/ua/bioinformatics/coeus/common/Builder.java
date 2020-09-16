@@ -10,6 +10,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import pt.ua.bioinformatics.coeus.data.connect.CSVFactory;
 import pt.ua.bioinformatics.coeus.data.connect.LinkedDataFactory;
+import pt.ua.bioinformatics.coeus.data.connect.PluginFactory;
 import pt.ua.bioinformatics.coeus.data.connect.RDFFactory;
 import pt.ua.bioinformatics.coeus.data.connect.ResourceFactory;
 import pt.ua.bioinformatics.coeus.data.connect.SPARQLFactory;
@@ -171,7 +172,9 @@ public class Builder {
                     factory = new LinkedDataFactory(r);
                 } else if (r.getPublisher().equalsIgnoreCase("rdf") | r.getPublisher().equalsIgnoreCase("ttl")) {
                     factory = new RDFFactory(r);
-                } else {
+                } else if (r.getPublisher().equalsIgnoreCase("plugin")) {
+                    factory = new PluginFactory(r);
+                }else {
                     factory = null;
                 }
                 factory.read();

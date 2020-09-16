@@ -21,7 +21,8 @@ public class Predicate {
     }
 
     public static Property get(String what) {
-        return predicates.get(what);
+        Property p = predicates.get(what);
+        return p;
     }
 
     /**

@@ -17,6 +17,7 @@ http://bioinformatics.ua.pt/coeus/resource/isAssociatedTo
 http://bioinformatics.ua.pt/coeus/resource/isBridgedTo
 http://bioinformatics.ua.pt/coeus/resource/isConceptOf
 http://bioinformatics.ua.pt/coeus/resource/isConnectedTo
+http://bioinformatics.ua.pt/coeus/resource/delimiter
 http://bioinformatics.ua.pt/coeus/resource/isEntityOf
 http://bioinformatics.ua.pt/coeus/resource/isExtendedBy
 http://bioinformatics.ua.pt/coeus/resource/isIncludedIn
@@ -251,3 +252,10 @@ http://purl.org/dc/terms/temporal
 http://purl.org/dc/terms/title
 http://purl.org/dc/terms/type
 http://purl.org/dc/terms/valid
+http://bioinformatics.ua.pt/diseasecard/resource/chromosomalLocation
+http://bioinformatics.ua.pt/diseasecard/resource/hasPhenotype
+http://bioinformatics.ua.pt/diseasecard/resource/hasGenotype
+http://bioinformatics.ua.pt/diseasecard/resource/name
+http://bioinformatics.ua.pt/diseasecard/resource/omim
+http://bioinformatics.ua.pt/diseasecard/resource/phenotype
+http://bioinformatics.ua.pt/diseasecard/resource/genotype

@@ -1,9 +1,9 @@
 {
 "config": {
-        "name": "http://bioinformatics.ua.pt",
-        "description": "COEUS Model Test",
-        "keyprefix":"coeus",
-        "version": "1.0a",
+        "name": "Diseasecard",
+        "description": "Diseasecard: rare genetic diseases research portal",
+        "keyprefix":"diseasecard",
+        "version": "4.5",
         "ontology": "http://bioinformatics.ua.pt/coeus/ontology/",
         "setup": "setup.rdf",
         "sdb":"sdb.ttl",
@@ -12,7 +12,7 @@
         "debug": true,
         "apikey":"coeus|uavr",
         "environment":"default",
-        "wizard":false
+        "wizard":true
 },
 "prefixes" : {
         "coeus": "http://bioinformatics.ua.pt/coeus/resource/",
@@ -25,5 +25,7 @@
         "np": "http://www.nanopub.org/nschema#",
         "prov": "http://www.w3.org/ns/prov", 
         "dcterms": "http://purl.org/dc/terms/",
-}
+        "d2r":"http://sites.wiwiss.fu-berlin.de/suhl/bizer/d2r-server/config.rdf#",
+        "diseasecard": "http://bioinformatics.ua.pt/diseasecard/resource/"
+    }
 }
