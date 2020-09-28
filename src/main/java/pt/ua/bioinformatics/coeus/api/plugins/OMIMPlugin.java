@@ -1,5 +1,4 @@
 package pt.ua.bioinformatics.coeus.api.plugins;
-
 import au.com.bytecode.opencsv.CSVReader;
 import java.io.BufferedReader;
 import java.io.File;
@@ -37,6 +36,7 @@ public class OMIMPlugin {
     private API api;
     private HashMap<String, Disease> diseases;
     private HashMap<String, Disease> genotypes;
+    private static HashMap<String, String> omims;
     private ArrayList<String> hgnc = new ArrayList<String>();
 
     public HashMap<String, Disease> getGenotypes() {
@@ -67,8 +67,16 @@ public class OMIMPlugin {
         this.res = res;
         this.diseases = new HashMap<String, Disease>();
         this.genotypes = new HashMap<String, Disease>();
+        this.omims = new HashMap<>();
         this.api = Boot.getAPI();
     }
+    
+    
+    public static HashMap<String, String> getOMIMs()
+    {
+        return omims;
+    }
+    
 
     /**
      * OMIMPlugin controller.
@@ -80,13 +88,14 @@ public class OMIMPlugin {
      * </ul></p>
      *
      */
-    public void itemize() {
+    public HashMap<String, String> itemize() {
 //        loadHGNC();
-        loadGenotype();
-        loadPhenotype();
+//        loadGenotype();
+//        loadPhenotype();
         if (loadGenotype() && loadPhenotype()) {
             triplify();
         }
+        return this.omims;
     }
 
     /**
@@ -96,20 +105,20 @@ public class OMIMPlugin {
      */
     private boolean loadGenotype() {
         boolean success = false;
-        System.out.println("\n\n\nLoad Genotype");
         try {
-//            URL u = new URL("ftp://ftp.ncbi.nih.gov/repository/OMIM/ARCHIVE/genemap");
 //            URL u = new URL("http://omim.dev/genemap");
+
+//            URL u = new URL("ftp://ftp.ncbi.nih.gov/repository/OMIM/ARCHIVE/genemap");
 //            BufferedReader in = new BufferedReader(new InputStreamReader(u.openStream()));
             
             
-            File file = new File("/home/mfs98/Documents/BOLSA/Extra/genemapS");
+            File file = new File("/home/mfs98/Documents/BOLSA/Extra/genemap");
             BufferedReader in = new BufferedReader(new FileReader(file));
-            
-            
+
             CSVReader reader = new CSVReader(in, '|');
             List<String[]> genemap = reader.readAll();
-            for (String[] genes : genemap) {
+            for (String[] genes : genemap) 
+            {
                 Disease d = new Disease(genes[7], genes[9]);
                 d.setLocation(genes[4]);
                 genotypes.put(d.getOmimId(), d);
@@ -118,6 +127,8 @@ public class OMIMPlugin {
 //                        d.getGenes().add(valid_gene);
 //                    }
 //                }
+
+                this.omims.put(genes[9], genes[4]);
 
                 String[] genelist = genes[5].split(", ");
                 d.getGenes().addAll(Arrays.asList(genelist));
@@ -141,14 +152,14 @@ public class OMIMPlugin {
     private boolean loadPhenotype() {
         boolean success = false;
         try {
+//            URL u = new URL("http://omim.dev/morbidmap");      
+
 //            URL u = new URL("ftp://ftp.ncbi.nih.gov/repository/OMIM/ARCHIVE/morbidmap");            
-//            URL u = new URL("http://omim.dev/morbidmap");
 //            BufferedReader in = new BufferedReader(new InputStreamReader(u.openStream()));
             
             
-            File file = new File("/home/mfs98/Documents/BOLSA/Extra/morbidmapS");
+            File file = new File("/home/mfs98/Documents/BOLSA/Extra/morbidmap");
             BufferedReader in = new BufferedReader(new FileReader(file));
-            
             
             CSVReader reader = new CSVReader(in, '|');
             List<String[]> morbidmap = reader.readAll();
@@ -272,7 +283,7 @@ public class OMIMPlugin {
                     api.addStatement(geno_item, Predicate.get("diseasecard:omim"), genotype.getOmimId());
                     api.addStatement(geno_item, Predicate.get("diseasecard:chromosomalLocation"), genotype.getLocation());
 
-                    triplifyGenes(genotype.getGenes(), geno_item);
+                    //triplifyGenes(genotype.getGenes(), geno_item);
 
                     for (Disease phenotype : genotype.getPhenotypes()) {
                         com.hp.hpl.jena.rdf.model.Resource pheno_item = api.createResource(PrefixFactory.getURIForPrefix(Config.getKeyPrefix()) + itemTmp[1] + "_" + phenotype.getOmimId());
@@ -301,7 +312,7 @@ public class OMIMPlugin {
                         api.addStatement(pheno_item, Predicate.get("diseasecard:hasGenotype"), geno_item);
                         api.addStatement(geno_item, Predicate.get("diseasecard:hasPhenotype"), pheno_item);
 
-                        triplifyGenes(phenotype.getGenes(), pheno_item);
+                        //triplifyGenes(phenotype.getGenes(), pheno_item);
                     }
 
                     api.addStatement(geno_item, Predicate.get("diseasecard:genotype"), "true");
@@ -367,6 +378,5 @@ public class OMIMPlugin {
                 Logger.getLogger(OMIMPlugin.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-
     }
 }

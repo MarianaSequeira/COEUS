@@ -110,7 +110,7 @@ public class PrefixFactory {
     public static String allToString() {
         String p = "";
         for (String o : prefixes.keySet()) {
-            p += "PREFIX " + o + ": " + "<" + prefixes.get(o).toString() + ">\n";
+            p += "PREFIX " + o + ": " + "<" + prefixes.get(o) + ">\n";
         }
         return p;
     }

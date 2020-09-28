@@ -57,7 +57,15 @@ public class DiseaseAPI {
             map.put("omim", omim);
 
             // the SPARQL query
-            ResultSet rs = api.selectRS("SELECT * WHERE { diseasecard:omim_" + omim + " diseasecard:chromosomalLocation ?chromo . diseasecard:omim_" + omim + " dc:description ?d . diseasecard:omim_" + omim + " coeus:isAssociatedTo ?a1 . ?a1 coeus:isAssociatedTo ?a2 . { OPTIONAL {diseasecard:omim_" + omim + " diseasecard:hasGenotype ?g} . OPTIONAL { diseasecard:omim_" + omim + " diseasecard:hasPhenotype ?p }. OPTIONAL { diseasecard:omim_" + omim + " diseasecard:name ?n } . OPTIONAL {diseasecard:omim_" + omim + " diseasecard:phenotype ?pheno} . OPTIONAL {diseasecard:omim_" + omim + " diseasecard:genotype ?geno .}}}", false);
+            ResultSet rs = api.selectRS("SELECT * WHERE { diseasecard:omim_" + omim + " diseasecard:chromosomalLocation ?chromo ."
+                    + " diseasecard:omim_" + omim + " dc:description ?d . "
+                    + "{ OPTIONAL {diseasecard:omim_" + omim + " diseasecard:hasGenotype ?g} . "
+                    + "OPTIONAL {diseasecard:omim_" + omim + " coeus:isAssociatedTo ?a1} . "
+                    + "OPTIONAL {?a1 coeus:isAssociatedTo ?a2} . "
+                    + "OPTIONAL { diseasecard:omim_" + omim + " diseasecard:hasPhenotype ?p }. "
+                    + "OPTIONAL { diseasecard:omim_" + omim + " diseasecard:name ?n } . "
+                    + "OPTIONAL {diseasecard:omim_" + omim + " diseasecard:phenotype ?pheno} . "
+                    + "OPTIONAL {diseasecard:omim_" + omim + " diseasecard:genotype ?geno .}}}", false);
             JSONArray synonyms = new JSONArray();
             JSONArray results = new JSONArray();
             String description = "";
@@ -67,20 +75,27 @@ public class DiseaseAPI {
                 String a1 = "";
                 String a2 = "";
                 QuerySolution row = rs.next();
-                if (row.get("a1").toString().contains("malacards")) {
-                    a1 = row.get("a1").toString().replace("http://bioinformatics.ua.pt/diseasecard/resource/malacards_", "malacards:");
-                } else {
-                    a1 = ItemFactory.getTokenFromURI(row.get("a1").toString()).replace("_", ":");
-                }
-
-                if (row.get("a2").toString().contains("mesh")) {
-                    a2 = ItemFactory.getTokenFromURI(row.get("a2").toString()).replace("_", ":");
-                    if (!a2.contains("mesh")) {
-                        a2 = "mesh:" + a2;
+                
+                if (row.contains("a1"))
+                {
+                    if (row.get("a1").toString().contains("malacards")) {
+                        a1 = row.get("a1").toString().replace("http://bioinformatics.ua.pt/diseasecard/resource/malacards_", "malacards:");
+                    } else {
+                        a1 = ItemFactory.getTokenFromURI(row.get("a1").toString()).replace("_", ":");
                     }
-                } else {
-                    a2 = ItemFactory.getTokenFromURI(row.get("a2").toString()).replace("_", ":");
                 }
+                if (row.contains("a2"))
+                {
+                    if (row.get("a2").toString().contains("mesh")) {
+                        a2 = ItemFactory.getTokenFromURI(row.get("a2").toString()).replace("_", ":");
+                        if (!a2.contains("mesh")) {
+                            a2 = "mesh:" + a2;
+                        }
+                    } else {
+                        a2 = ItemFactory.getTokenFromURI(row.get("a2").toString()).replace("_", ":");
+                    }
+                }
+                
 
                 description = row.get("d").toString().replace("{", "").replace("}", "").replace("[", "").replace("]", "");
                 map.put("description", description);

@@ -5,7 +5,7 @@
         "keyprefix":"diseasecard",
         "version": "4.5",
         "ontology": "http://bioinformatics.ua.pt/coeus/ontology/",
-        "setup": "setup.rdf",
+        "setup": "setup_valid.rdf",
         "sdb":"sdb.ttl",
         "predicates":"predicates.csv",
         "built": false,
@@ -16,6 +16,7 @@
 },
 "prefixes" : {
         "coeus": "http://bioinformatics.ua.pt/coeus/resource/",
+        "diseasecard": "http://bioinformatics.ua.pt/diseasecard/resource/",
         "owl2xml":"http://www.w3.org/2006/12/owl2-xml#",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
@@ -25,7 +26,6 @@
         "np": "http://www.nanopub.org/nschema#",
         "prov": "http://www.w3.org/ns/prov", 
         "dcterms": "http://purl.org/dc/terms/",
-        "d2r":"http://sites.wiwiss.fu-berlin.de/suhl/bizer/d2r-server/config.rdf#",
-        "diseasecard": "http://bioinformatics.ua.pt/diseasecard/resource/"
+        "d2r":"http://sites.wiwiss.fu-berlin.de/suhl/bizer/d2r-server/config.rdf#"
     }
 }

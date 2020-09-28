@@ -40,6 +40,7 @@ function getPrefixURI() {
         rdfs: "http://www.w3.org/2000/01/rdf-schema#",
         coeus: "http://bioinformatics.ua.pt/coeus/resource/",
         np: "http://www.nanopub.org/nschema#",
+        diseasecard: "http://bioinformatics.ua.pt/diseasecard/resource/",
         owl: "http://www.w3.org/2002/07/owl#"
     };
     return prefixes;
@@ -55,8 +56,10 @@ function getPrefix(uri) {
     var prefixes = getPrefixURI();
 
     for (var key in prefixes) {
-        if (prefixes[key] === uri)
+        if (prefixes[key] === uri){
             return key;
+        }
+            
     }
     return '';
 }
@@ -79,7 +82,6 @@ function splitURIPrefix(uri) {
         "namespace": namespace,
         "value": value
     };
-
     return mapping;
 }
 /**
@@ -398,10 +400,11 @@ function resultToPredicate(pred) {
  */
 function queryToResult(selectQuery, callback) {
     var query = initSparqlerQuery();
+    console.log(selectQuery);
     query.query(selectQuery,
             {success: function(json) {
                     var result = json.results.bindings;
-                    //console.log(result);
+                    console.log(result);
                     callback(result);
                 }}
     );
@@ -1291,6 +1294,7 @@ function loadSeedsOnSidebar() {
         $('#sidebarseeds').html('');
         for (var key in result) {
             var splitedURI = splitURIPrefix(result[key].seed.value);
+            console.log("splitedURI: " + splitedURI);
             var a = '<li><a target="_blank" href="/'+getFirstPath()+'/resource/' + splitedURI.value + '"><i class="fa fa-circle-o"></i> ' + splitedURI.value + '</a></li>';//TODO: FIX THAT LINK
             $('#sidebarseeds').append(a);
         }

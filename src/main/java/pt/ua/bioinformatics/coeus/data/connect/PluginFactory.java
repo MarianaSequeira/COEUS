@@ -3,6 +3,7 @@ package pt.ua.bioinformatics.coeus.data.connect;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import pt.ua.bioinformatics.coeus.api.API;
+import pt.ua.bioinformatics.coeus.api.plugins.HGNCPlugin;
 import pt.ua.bioinformatics.coeus.api.plugins.OMIMPlugin;
 import pt.ua.bioinformatics.coeus.common.Boot;
 import pt.ua.bioinformatics.coeus.common.Config;
@@ -41,14 +42,22 @@ public class PluginFactory implements ResourceFactory{
      *  <li>Itemize single item</li>
      * </ol></p>
      */
+    @Override
     public void read() {
         String[] divide = res.getEndpoint().split("://");
-        String type = "omim"; //divide[0];
         try {
-            if (type.equals("omim")) {
-                OMIMPlugin omim = new OMIMPlugin(res);
-                omim.itemize();
+            switch (divide[0].trim())
+            {
+                case "omim": 
+                    OMIMPlugin omim = new OMIMPlugin(res);
+                    omim.itemize();
+                    break;
+                case "hgnc":
+                    HGNCPlugin hgnc = new HGNCPlugin(res);
+                    hgnc.itemize();
+                    break;
             }
+            
         } catch (Exception ex) {
             if (Config.isDebug()) {
                 System.out.println("[COEUS][SPARQLFactory] unable to load data for " + res.getUri());

@@ -1,7 +1,7 @@
 {
-    "$sdb:jdbcURL" : "jdbc:mysql://localhost:3306/coeus?autoReconnect=true",
-    "$sdb:sdbUser" : "demo",
-    "$sdb:sdbPassword" :"demo",
+    "$sdb:jdbcURL" : "jdbc:mysql://localhost:3306/diseasecard?autoReconnect=true",
+    "$sdb:sdbUser" : "diseasecard",
+    "$sdb:sdbPassword" :"diseasecard",
 
     "$conf:projectName" :"coeus.demo",
     "$conf:projectHomepage" :"http://bioinformatics.ua.pt/coeus/",
