@@ -268,11 +268,7 @@ public class HGNCPlugin_Slow {
         
         for(HGNC hgnc : this.hgncs)
         {
-<<<<<<< HEAD
             if(hgnc.getChromosomes().equals(chromosomalLocation))
-=======
-            if(hgnc.getChromosomes().contains(chromosomalLocation))
->>>>>>> f60e615c4bb997073019a6527f72a6c05a2ca036
             {
                 result.add(hgnc);
             }

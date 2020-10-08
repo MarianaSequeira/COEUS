@@ -88,7 +88,7 @@ public class OMIMPlugin {
      * </ul></p>
      *
      */
-    public HashMap<String, String> itemize() {
+    public HashMap<String, String[]> itemize() {
 //        loadHGNC();
 //        loadGenotype();
 //        loadPhenotype();
