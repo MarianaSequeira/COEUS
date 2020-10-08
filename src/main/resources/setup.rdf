@@ -9,6 +9,7 @@
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY coeus "http://bioinformatics.ua.pt/coeus/resource/" >
+    <!ENTITY diseasecard "http://bioinformatics.ua.pt/diseasecard/resource/" >
 ]>
 
 
@@ -1004,7 +1005,7 @@
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/seed_Diseasecard4 -->
 
-    <owl:NamedIndividual rdf:about="&coeus;seed_Diseasecard4">
+    <owl:NamedIndividual rdf:about="&diseasecard;seed_Diseasecard4">
         <rdf:type rdf:resource="http://bioinformatics.ua.pt/coeus/resource/Seed"/>
         <rdfs:label rdf:datatype="&xsd;string">seed_diseasecard</rdfs:label>
         <dc:date rdf:datatype="&xsd;date">2013-05-06</dc:date>
@@ -1015,18 +1016,18 @@
         <dc:description rdf:datatype="&xsd;string">Diseasecard4 COEUS instance</dc:description>
         <dc:creator rdf:datatype="&xsd;string">Pedro Lopes</dc:creator>
         <dc:source rdf:datatype="&xsd;string">UA.PT Bioinformatics</dc:source>
-        <includes rdf:resource="&coeus;entity_Disease"/>
-        <includes rdf:resource="&coeus;entity_Drug"/>
-        <includes rdf:resource="&coeus;entity_Locus"/>
-        <includes rdf:resource="&coeus;entity_Metabolism"/>
-        <includes rdf:resource="&coeus;entity_Ontology"/>
-        <includes rdf:resource="&coeus;entity_Protein"/>
-        <includes rdf:resource="&coeus;entity_Study"/>
+        <includes rdf:resource="&diseasecard;entity_Disease"/>
+        <includes rdf:resource="&diseasecard;entity_Drug"/>
+        <includes rdf:resource="&diseasecard;entity_Locus"/>
+        <includes rdf:resource="&diseasecard;entity_Metabolism"/>
+        <includes rdf:resource="&diseasecard;entity_Ontology"/>
+        <includes rdf:resource="&diseasecard;entity_Protein"/>
+        <includes rdf:resource="&diseasecard;entity_Study"/>
     </owl:NamedIndividual>
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/concept_ClinicalTrials -->
 
-    <owl:NamedIndividual rdf:about="&coeus;concept_ClinicalTrials">
+    <owl:NamedIndividual rdf:about="&diseasecard;concept_ClinicalTrials">
         <rdf:type rdf:resource="&coeus;Concept"/>
         <rdfs:label rdf:datatype="&xsd;string">concept_clinicaltrials</rdfs:label>
         <dc:date rdf:datatype="&xsd;date">2013-05-06</dc:date>
@@ -1035,14 +1036,14 @@
         <rdfs:comment rdf:datatype="&xsd;string">Concept relating ClinicalTrials study data.</rdfs:comment>
         <dc:description rdf:datatype="&xsd;string">Concept relating ClinicalTrials study data.</dc:description>
         <dc:creator rdf:datatype="&xsd;string">Pedro Lopes pedrolopes@ua.pt</dc:creator>
-        <hasEntity rdf:resource="&coeus;entity_Study"/>
-        <hasResource rdf:resource="&coeus;resource_ClinicalTrials"/>
+        <hasEntity rdf:resource="&diseasecard;entity_Study"/>
+        <hasResource rdf:resource="&diseasecard;resource_ClinicalTrials"/>
     </owl:NamedIndividual>    
     
     
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/concept_ENZYME -->
 
-    <owl:NamedIndividual rdf:about="&coeus;concept_ENZYME">
+    <owl:NamedIndividual rdf:about="&diseasecard;concept_ENZYME">
         <rdf:type rdf:resource="&coeus;Concept"/>
         <rdfs:label rdf:datatype="&xsd;string">concept_enzyme</rdfs:label>
         <dc:date rdf:datatype="&xsd;date">2013-05-06</dc:date>
@@ -1051,14 +1052,14 @@
         <rdfs:comment rdf:datatype="&xsd;string">Concept relating ENZYME metabolism data.</rdfs:comment>
         <dc:title rdf:datatype="&xsd;string">ENZYME</dc:title>
         <dc:creator rdf:datatype="&xsd;string">Pedro Lopes pedrolopes@ua.pt</dc:creator>
-        <hasEntity rdf:resource="&coeus;entity_Metabolism"/>
-        <hasResource rdf:resource="&coeus;resource_ENZYME"/>
+        <hasEntity rdf:resource="&diseasecard;entity_Metabolism"/>
+        <hasResource rdf:resource="&diseasecard;resource_ENZYME"/>
     </owl:NamedIndividual>
     
     
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/concept_Ensembl -->
 
-    <owl:NamedIndividual rdf:about="&coeus;concept_Ensembl">
+    <owl:NamedIndividual rdf:about="&diseasecard;concept_Ensembl">
         <rdf:type rdf:resource="&coeus;Concept"/>
         <rdfs:label rdf:datatype="&xsd;string">concept_ensembl</rdfs:label>
         <dc:date rdf:datatype="&xsd;date">2011-04-04</dc:date>
@@ -1067,14 +1068,14 @@
         <rdfs:comment rdf:datatype="&xsd;string">Concept relating Ensembl genome browser data.</rdfs:comment>
         <dc:title rdf:datatype="&xsd;string">Ensembl</dc:title>
         <rdfs:comment rdf:datatype="&xsd;string">Pedro Lopes pedrolopes@ua.pt</rdfs:comment>
-        <hasEntity rdf:resource="&coeus;entity_Locus"/>
-        <hasResource rdf:resource="&coeus;resource_Ensembl"/>
+        <hasEntity rdf:resource="&diseasecard;entity_Locus"/>
+        <hasResource rdf:resource="&diseasecard;resource_Ensembl"/>
     </owl:NamedIndividual>
     
     
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/concept_EntrezGene -->
 
-    <owl:NamedIndividual rdf:about="&coeus;concept_EntrezGene">
+    <owl:NamedIndividual rdf:about="&diseasecard;concept_EntrezGene">
         <rdf:type rdf:resource="&coeus;Concept"/>
         <rdfs:label rdf:datatype="&xsd;string">concept_entrez</rdfs:label>
         <dc:date rdf:datatype="&xsd;date">2011-04-04</dc:date>
@@ -1083,15 +1084,15 @@
         <dc:description rdf:datatype="&xsd;string">Concept relating EntrezGene data.</dc:description>
         <dc:title rdf:datatype="&xsd;string">EntrezGene</dc:title>
         <rdfs:comment rdf:datatype="&xsd;string">Pedro Lopes pedrolopes@ua.pt</rdfs:comment>
-        <hasEntity rdf:resource="&coeus;entity_Locus"/>
-        <hasResource rdf:resource="&coeus;resource_EntrezGene"/>
-        <hasResource rdf:resource="&coeus;resource_EntrezGene2"/>
+        <hasEntity rdf:resource="&diseasecard;entity_Locus"/>
+        <hasResource rdf:resource="&diseasecard;resource_EntrezGene"/>
+        <hasResource rdf:resource="&diseasecard;resource_EntrezGene2"/>
     </owl:NamedIndividual>
     
     
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/concept_GO -->
 
-    <owl:NamedIndividual rdf:about="&coeus;concept_GO">
+    <owl:NamedIndividual rdf:about="&diseasecard;concept_GO">
         <rdf:type rdf:resource="&coeus;Concept"/>
         <rdfs:label rdf:datatype="&xsd;string">concept_go</rdfs:label>
         <dc:date rdf:datatype="&xsd;date">2013-05-03</dc:date>
@@ -1100,14 +1101,14 @@
         <rdfs:comment rdf:datatype="&xsd;string">Gene Ontology mappings.</rdfs:comment>
         <dc:description rdf:datatype="&xsd;string">Gene Ontology mappings.</dc:description>
         <dc:creator rdf:datatype="&xsd;string">Pedro Lopes pedrolopes@ua.pt</dc:creator>
-        <hasEntity rdf:resource="&coeus;entity_Ontology"/>
-        <hasResource rdf:resource="&coeus;resource_GO"/>
+        <hasEntity rdf:resource="&diseasecard;entity_Ontology"/>
+        <hasResource rdf:resource="&diseasecard;resource_GO"/>
     </owl:NamedIndividual>    
 
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/concept_GWASCentral -->
 
-    <owl:NamedIndividual rdf:about="&coeus;concept_GWASCentral">
+    <owl:NamedIndividual rdf:about="&diseasecard;concept_GWASCentral">
         <rdf:type rdf:resource="&coeus;Concept"/>
         <rdfs:label rdf:datatype="&xsd;string">concept_gwascentral</rdfs:label>
         <dc:date rdf:datatype="&xsd;date">2013-05-03</dc:date>
@@ -1116,14 +1117,14 @@
         <rdfs:comment rdf:datatype="&xsd;string">Concept relating GWASCentral study data.</rdfs:comment>
         <dc:title rdf:datatype="&xsd;string">GWASCentral</dc:title>
         <dc:creator rdf:datatype="&xsd;string">Pedro Lopes pedrolopes@ua.pt</dc:creator>
-        <hasEntity rdf:resource="&coeus;entity_Study"/>
-        <hasResource rdf:resource="&coeus;resource_gwascentral"/>
+        <hasEntity rdf:resource="&diseasecard;entity_Study"/>
+        <hasResource rdf:resource="&diseasecard;resource_gwascentral"/>
     </owl:NamedIndividual>
     
     
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/concept_GeneCards -->
 
-    <owl:NamedIndividual rdf:about="&coeus;concept_GeneCards">
+    <owl:NamedIndividual rdf:about="&diseasecard;concept_GeneCards">
         <rdf:type rdf:resource="&coeus;Concept"/>
         <rdfs:label rdf:datatype="&xsd;string">concept_genecards</rdfs:label>
         <dc:date rdf:datatype="&xsd;date">2013-05-03</dc:date>
@@ -1132,14 +1133,14 @@
         <rdfs:comment rdf:datatype="&xsd;string">Concept relating GeneCards data.</rdfs:comment>
         <dc:title rdf:datatype="&xsd;string">GeneCards</dc:title>
         <rdfs:comment rdf:datatype="&xsd;string">Pedro Lopes pedrolopes@ua.pt</rdfs:comment>
-        <hasEntity rdf:resource="&coeus;entity_Locus"/>
-        <hasResource rdf:resource="&coeus;resource_GeneCards"/>
+        <hasEntity rdf:resource="&diseasecard;entity_Locus"/>
+        <hasResource rdf:resource="&diseasecard;resource_GeneCards"/>
     </owl:NamedIndividual>
     
     
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/concept_HGNC -->
 
-    <owl:NamedIndividual rdf:about="&coeus;concept_HGNC">
+    <owl:NamedIndividual rdf:about="&diseasecard;concept_HGNC">
         <rdf:type rdf:resource="&coeus;Concept"/>
         <rdfs:label rdf:datatype="&xsd;string">concept_hgnc</rdfs:label>
         <dc:date rdf:datatype="&xsd;date">2013-05-06</dc:date>
@@ -1148,16 +1149,16 @@
         <rdfs:comment rdf:datatype="&xsd;string">Concept relating HGNC data.</rdfs:comment>
         <dc:title rdf:datatype="&xsd;string">HGNC</dc:title>
         <rdfs:comment rdf:datatype="&xsd;string">Pedro Lopes pedrolopes@ua.pt</rdfs:comment>
-        <hasEntity rdf:resource="&coeus;entity_Locus"/>
-        <isExtendedBy rdf:resource="&coeus;resource_ClinicalTrials"/>
-        <hasResource rdf:resource="&coeus;resource_HGNC"/>
-        <isExtendedBy rdf:resource="&coeus;resource_LSDB"/>
+        <hasEntity rdf:resource="&diseasecard;entity_Locus"/>
+        <isExtendedBy rdf:resource="&diseasecard;resource_ClinicalTrials"/>
+        <hasResource rdf:resource="&diseasecard;resource_HGNC"/>
+        <isExtendedBy rdf:resource="&diseasecard;resource_LSDB"/>
     </owl:NamedIndividual>
     
     
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/concept_ICD10 -->
 
-    <owl:NamedIndividual rdf:about="&coeus;concept_ICD10">
+    <owl:NamedIndividual rdf:about="&diseasecard;concept_ICD10">
         <rdf:type rdf:resource="&coeus;Concept"/>
         <rdfs:label rdf:datatype="&xsd;string">concept_icd10</rdfs:label>
         <dc:date rdf:datatype="&xsd;date">2013-05-06</dc:date>
@@ -1166,14 +1167,14 @@
         <rdfs:comment rdf:datatype="&xsd;string">Concept for ICD 10 ontology data.</rdfs:comment>
         <dc:title rdf:datatype="&xsd;string">ICD10</dc:title>
         <dc:creator rdf:datatype="&xsd;string">Pedro Lopes pedrolopes@ua.pt</dc:creator>
-        <hasEntity rdf:resource="&coeus;entity_Disease"/>
-        <hasResource rdf:resource="&coeus;resource_icd10"/>
+        <hasEntity rdf:resource="&diseasecard;entity_Disease"/>
+        <hasResource rdf:resource="&diseasecard;resource_icd10"/>
     </owl:NamedIndividual>
     
     
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/concept_InterPro -->
 
-    <owl:NamedIndividual rdf:about="&coeus;concept_InterPro">
+    <owl:NamedIndividual rdf:about="&diseasecard;concept_InterPro">
         <rdf:type rdf:resource="&coeus;Concept"/>
         <rdfs:label rdf:datatype="&xsd;string">concept_interpro</rdfs:label>
         <dc:date rdf:datatype="&xsd;date">2013-05-03</dc:date>
@@ -1182,14 +1183,14 @@
         <rdfs:comment rdf:datatype="&xsd;string">Concept relating InterPro protein data.</rdfs:comment>
         <dc:title rdf:datatype="&xsd;string">InterPro</dc:title>
         <dc:creator rdf:datatype="&xsd;string">Pedro Lopes pedrolopes@ua.pt</dc:creator>
-        <hasEntity rdf:resource="&coeus;entity_Protein"/>
-        <hasResource rdf:resource="&coeus;resource_InterPro"/>
+        <hasEntity rdf:resource="&diseasecard;entity_Protein"/>
+        <hasResource rdf:resource="&diseasecard;resource_InterPro"/>
     </owl:NamedIndividual>    
     
     
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/concept_KEGG -->
 
-    <owl:NamedIndividual rdf:about="&coeus;concept_KEGG">
+    <owl:NamedIndividual rdf:about="&diseasecard;concept_KEGG">
         <rdf:type rdf:resource="&coeus;Concept"/>
         <rdfs:label rdf:datatype="&xsd;string">concept_kegg</rdfs:label>
         <dc:date rdf:datatype="&xsd;date">2011-04-02</dc:date>
@@ -1198,14 +1199,14 @@
         <dc:description rdf:datatype="&xsd;string">Concept relating KEGG metabolism data.</dc:description>
         <dc:title rdf:datatype="&xsd;string">KEGG</dc:title>
         <dc:creator rdf:datatype="&xsd;string">Pedro Lopes pedrolopes@ua.pt</dc:creator>
-        <hasEntity rdf:resource="&coeus;entity_Metabolism"/>
-        <hasResource rdf:resource="&coeus;resource_KEGG"/>
+        <hasEntity rdf:resource="&diseasecard;entity_Metabolism"/>
+        <hasResource rdf:resource="&diseasecard;resource_KEGG"/>
     </owl:NamedIndividual>    
     
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/concept_LSDB -->
 
-    <owl:NamedIndividual rdf:about="&coeus;concept_LSDB">
+    <owl:NamedIndividual rdf:about="&diseasecard;concept_LSDB">
         <rdf:type rdf:resource="&coeus;Concept"/>
         <rdfs:label rdf:datatype="&xsd;string">concept_lsdb</rdfs:label>
         <dc:date rdf:datatype="&xsd;date">2013-05-03</dc:date>
@@ -1214,14 +1215,14 @@
         <rdfs:comment rdf:datatype="&xsd;string">LSDB LSDB concept.</rdfs:comment>
         <dc:description rdf:datatype="&xsd;string">LSDB LSDB concept.</dc:description>
         <dc:creator rdf:datatype="&xsd;string">Pedro Lopes pedrolopes@ua.pt</dc:creator>
-        <hasEntity rdf:resource="&coeus;entity_Variome"/>
-        <hasResource rdf:resource="&coeus;resource_LSDB"/>
+        <hasEntity rdf:resource="&diseasecard;entity_Variome"/>
+        <hasResource rdf:resource="&diseasecard;resource_LSDB"/>
     </owl:NamedIndividual>
     
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/concept_MeSH -->
 
-    <owl:NamedIndividual rdf:about="&coeus;concept_MeSH">
+    <owl:NamedIndividual rdf:about="&diseasecard;concept_MeSH">
         <rdf:type rdf:resource="&coeus;Concept"/>
         <rdfs:label rdf:datatype="&xsd;string">concept_mesh</rdfs:label>
         <dc:date rdf:datatype="&xsd;date">2013-05-03</dc:date>
@@ -1230,14 +1231,14 @@
         <dc:description rdf:datatype="&xsd;string">Concept relating MeSH ontology data.</dc:description>
         <dc:title rdf:datatype="&xsd;string">MeSH</dc:title>
         <dc:creator rdf:datatype="&xsd;string">Pedro Lopes pedrolopes@ua.pt</dc:creator>
-        <hasEntity rdf:resource="&coeus;entity_Ontology"/>
-        <hasResource rdf:resource="&coeus;resource_MeSH"/>
+        <hasEntity rdf:resource="&diseasecard;entity_Ontology"/>
+        <hasResource rdf:resource="&diseasecard;resource_MeSH"/>
     </owl:NamedIndividual>    
     
     
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/concept_MalaCards -->
 
-    <owl:NamedIndividual rdf:about="&coeus;concept_MalaCards">
+    <owl:NamedIndividual rdf:about="&diseasecard;concept_MalaCards">
         <rdf:type rdf:resource="&coeus;Concept"/>
         <rdfs:label rdf:datatype="&xsd;string">concept_malacards</rdfs:label>
         <dc:date rdf:datatype="&xsd;date">2013-05-03</dc:date>
@@ -1246,14 +1247,14 @@
         <dc:description rdf:datatype="&xsd;string">Concept relating MalaCards card data.</dc:description>
         <dc:title rdf:datatype="&xsd;string">MalaCards</dc:title>
         <dc:creator rdf:datatype="&xsd;string">Pedro Lopes pedrolopes@ua.pt</dc:creator>
-        <hasEntity rdf:resource="&coeus;entity_Disease"/>
-        <hasResource rdf:resource="&coeus;resource_MalaCards"/>
+        <hasEntity rdf:resource="&diseasecard;entity_Disease"/>
+        <hasResource rdf:resource="&diseasecard;resource_MalaCards"/>
     </owl:NamedIndividual>
     
     
      <!-- http://bioinformatics.ua.pt/diseasecard/resource/concept_OMIM -->
 
-    <owl:NamedIndividual rdf:about="&coeus;concept_OMIM">
+    <owl:NamedIndividual rdf:about="&diseasecard;concept_OMIM">
         <rdf:type rdf:resource="&coeus;Concept"/>
         <rdfs:label rdf:datatype="&xsd;string">concept_omim</rdfs:label>
         <dc:date rdf:datatype="&xsd;date">2013-05-06</dc:date>
@@ -1262,15 +1263,15 @@
         <rdfs:comment rdf:datatype="&xsd;string">Concept relating OMIM data.</rdfs:comment>
         <dc:title rdf:datatype="&xsd;string">OMIM</dc:title>
         <dc:creator rdf:datatype="&xsd;string">Pedro Lopes pedrolopes@ua.pt</dc:creator>
-        <hasEntity rdf:resource="&coeus;entity_Disease"/>
-        <hasResource rdf:resource="&coeus;resource_OMIM"/>
-        <isExtendedBy rdf:resource="&coeus;resource_orphanet"/>
+        <hasEntity rdf:resource="&diseasecard;entity_Disease"/>
+        <hasResource rdf:resource="&diseasecard;resource_OMIM"/>
+        <isExtendedBy rdf:resource="&diseasecard;resource_orphanet"/>
     </owl:NamedIndividual>   
     
     
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/concept_PDB -->
 
-    <owl:NamedIndividual rdf:about="&coeus;concept_PDB">
+    <owl:NamedIndividual rdf:about="&diseasecard;concept_PDB">
         <rdf:type rdf:resource="&coeus;Concept"/>
         <rdfs:label rdf:datatype="&xsd;string">concept_pdb</rdfs:label>
         <dc:date rdf:datatype="&xsd;date">2013-05-03</dc:date>
@@ -1279,14 +1280,14 @@
         <rdfs:comment rdf:datatype="&xsd;string">Concept relating PDB protein data.</rdfs:comment>
         <dc:title rdf:datatype="&xsd;string">PDB</dc:title>
         <dc:creator rdf:datatype="&xsd;string">Pedro Lopes pedrolopes@ua.pt</dc:creator>
-        <hasEntity rdf:resource="&coeus;entity_Protein"/>
-        <hasResource rdf:resource="&coeus;resource_PDB"/>
+        <hasEntity rdf:resource="&diseasecard;entity_Protein"/>
+        <hasResource rdf:resource="&diseasecard;resource_PDB"/>
     </owl:NamedIndividual>    
     
     
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/concept_PROSITE -->
 
-    <owl:NamedIndividual rdf:about="&coeus;concept_PROSITE">
+    <owl:NamedIndividual rdf:about="&diseasecard;concept_PROSITE">
         <rdf:type rdf:resource="&coeus;Concept"/>
         <rdfs:label rdf:datatype="&xsd;string">concept_prosite</rdfs:label>
         <dc:date rdf:datatype="&xsd;date">2013-05-03</dc:date>
@@ -1295,14 +1296,14 @@
         <dc:description rdf:datatype="&xsd;string">Concept relating PROSITE protein data.</dc:description>
         <dc:title rdf:datatype="&xsd;string">PROSITE</dc:title>
         <dc:creator rdf:datatype="&xsd;string">Pedro Lopes pedrolopes@ua.pt</dc:creator>
-        <hasEntity rdf:resource="&coeus;entity_Protein"/>
-        <hasResource rdf:resource="&coeus;resource_PROSITE"/>
+        <hasEntity rdf:resource="&diseasecard;entity_Protein"/>
+        <hasResource rdf:resource="&diseasecard;resource_PROSITE"/>
     </owl:NamedIndividual>    
     
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/concept_PharmGKB -->
 
-    <owl:NamedIndividual rdf:about="&coeus;concept_PharmGKB">
+    <owl:NamedIndividual rdf:about="&diseasecard;concept_PharmGKB">
         <rdf:type rdf:resource="&coeus;Concept"/>
         <rdfs:label rdf:datatype="&xsd;string">concept_pharmgkb</rdfs:label>
         <dc:date rdf:datatype="&xsd;date">2013-05-06</dc:date>
@@ -1311,14 +1312,14 @@
         <rdfs:comment rdf:datatype="&xsd;string">Concept relating PharmGKB drug data.</rdfs:comment>
         <dc:creator rdf:datatype="&xsd;string">Pedro Lopes pedrolopes@ua.pt</dc:creator>
         <dc:title rdf:datatype="&xsd;string">PharmGKB</dc:title>
-        <hasEntity rdf:resource="&coeus;entity_Drug"/>
-        <hasResource rdf:resource="&coeus;resource_PharmGKB"/>
+        <hasEntity rdf:resource="&diseasecard;entity_Drug"/>
+        <hasResource rdf:resource="&diseasecard;resource_PharmGKB"/>
     </owl:NamedIndividual>    
     
  
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/concept_UniProt -->
 
-    <owl:NamedIndividual rdf:about="&coeus;concept_UniProt">
+    <owl:NamedIndividual rdf:about="&diseasecard;concept_UniProt">
         <rdf:type rdf:resource="&coeus;Concept"/>
         <rdfs:label rdf:datatype="&xsd;string">concept_uniprot</rdfs:label>
         <dc:date rdf:datatype="&xsd;date">2013-05-06</dc:date>
@@ -1327,25 +1328,25 @@
         <rdfs:comment rdf:datatype="&xsd;string">Concept relating UniProt protein data.</rdfs:comment>
         <dc:creator rdf:datatype="&xsd;string">Pedro Lopes pedrolopes@ua.pt</dc:creator>
         <dc:title rdf:datatype="&xsd;string">UniProt</dc:title>
-        <hasEntity rdf:resource="&coeus;entity_Protein"/>
-        <isExtendedBy rdf:resource="&coeus;resource_ENZYME"/>
-        <isExtendedBy rdf:resource="&coeus;resource_GO"/>
-        <isExtendedBy rdf:resource="&coeus;resource_GeneCards"/>
-        <isExtendedBy rdf:resource="&coeus;resource_InterPro"/>
-        <isExtendedBy rdf:resource="&coeus;resource_KEGG"/>
-        <isExtendedBy rdf:resource="&coeus;resource_MeSH"/>
-        <isExtendedBy rdf:resource="&coeus;resource_PDB"/>
-        <isExtendedBy rdf:resource="&coeus;resource_PROSITE"/>
-        <isExtendedBy rdf:resource="&coeus;resource_PharmGKB"/>
-        <hasResource rdf:resource="&coeus;resource_UniProt"/>
-        <isExtendedBy rdf:resource="&coeus;resource_uniprot_ld"/>
-        <hasResource rdf:resource="&coeus;resource_uniprot_ld"/>
+        <hasEntity rdf:resource="&diseasecard;entity_Protein"/>
+        <isExtendedBy rdf:resource="&diseasecard;resource_ENZYME"/>
+        <isExtendedBy rdf:resource="&diseasecard;resource_GO"/>
+        <isExtendedBy rdf:resource="&diseasecard;resource_GeneCards"/>
+        <isExtendedBy rdf:resource="&diseasecard;resource_InterPro"/>
+        <isExtendedBy rdf:resource="&diseasecard;resource_KEGG"/>
+        <isExtendedBy rdf:resource="&diseasecard;resource_MeSH"/>
+        <isExtendedBy rdf:resource="&diseasecard;resource_PDB"/>
+        <isExtendedBy rdf:resource="&diseasecard;resource_PROSITE"/>
+        <isExtendedBy rdf:resource="&diseasecard;resource_PharmGKB"/>
+        <hasResource rdf:resource="&diseasecard;resource_UniProt"/>
+        <isExtendedBy rdf:resource="&diseasecard;resource_uniprot_ld"/>
+        <hasResource rdf:resource="&diseasecard;resource_uniprot_ld"/>
     </owl:NamedIndividual>    
        
           
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/concept_orphanet -->
 
-    <owl:NamedIndividual rdf:about="&coeus;concept_orphanet">
+    <owl:NamedIndividual rdf:about="&diseasecard;concept_orphanet">
         <rdf:type rdf:resource="&coeus;Concept"/>
         <rdfs:label rdf:datatype="&xsd;string">concept_orphanet</rdfs:label>
         <dc:date rdf:datatype="&xsd;date">2013-05-06</dc:date>
@@ -1354,15 +1355,15 @@
         <dc:description rdf:datatype="&xsd;string">Concept for OrphaNet data.</dc:description>
         <dc:title rdf:datatype="&xsd;string">OrphaNet</dc:title>
         <dc:creator rdf:datatype="&xsd;string">Pedro Lopes pedrolopes@ua.pt</dc:creator>
-        <hasEntity rdf:resource="&coeus;entity_Disease"/>
-        <isExtendedBy rdf:resource="&coeus;resource_icd10"/>
-        <hasResource rdf:resource="&coeus;resource_orphanet"/>
+        <hasEntity rdf:resource="&diseasecard;entity_Disease"/>
+        <isExtendedBy rdf:resource="&diseasecard;resource_icd10"/>
+        <hasResource rdf:resource="&diseasecard;resource_orphanet"/>
     </owl:NamedIndividual>             
     
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/csv_UniProt_id -->
 
-    <owl:NamedIndividual rdf:about="&coeus;csv_UniProt_id">
+    <owl:NamedIndividual rdf:about="&diseasecard;csv_UniProt_id">
         <rdf:type rdf:resource="&coeus;CSV"/>
         <rdfs:label rdf:datatype="&xsd;string">csv_uniprot_id</rdfs:label>
         <query rdf:datatype="&xsd;string">0</query>
@@ -1374,14 +1375,14 @@
         <regex rdf:datatype="&xsd;string">[P|Q][0-9]{5}</regex>
         <dc:title rdf:datatype="&xsd;string">csv_UniProt_id</dc:title>
         <property rdf:datatype="&xsd;string">dc:source|dc:title|dc:identifier</property>
-        <loadsFor rdf:resource="&coeus;resource_UniProt"/>
-        <isKeyOf rdf:resource="&coeus;resource_UniProt"/>
+        <loadsFor rdf:resource="&diseasecard;resource_UniProt"/>
+        <isKeyOf rdf:resource="&diseasecard;resource_UniProt"/>
     </owl:NamedIndividual>                
                    
                    
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/csv_gwascentral_id -->
 
-    <owl:NamedIndividual rdf:about="&coeus;csv_gwascentral_id">
+    <owl:NamedIndividual rdf:about="&diseasecard;csv_gwascentral_id">
         <rdf:type rdf:resource="&coeus;CSV"/>
         <rdfs:label rdf:datatype="&xsd;string">csv_gwascentral_id</rdfs:label>
         <query rdf:datatype="&xsd;int">0</query>
@@ -1390,14 +1391,14 @@
         <dc:title rdf:datatype="&xsd;string">GWAS Central id</dc:title>
         <dc:creator rdf:datatype="&xsd;string">Pedro Lopes pedrolopes@ua.pt</dc:creator>
         <property rdf:datatype="&xsd;string">dc:source|dc:identifier</property>
-        <isKeyOf rdf:resource="&coeus;resource_gwascentral"/>
-        <loadsFor rdf:resource="&coeus;resource_gwascentral"/>
+        <isKeyOf rdf:resource="&diseasecard;resource_gwascentral"/>
+        <loadsFor rdf:resource="&diseasecard;resource_gwascentral"/>
     </owl:NamedIndividual>
         
         
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/entity_Disease -->
 
-    <owl:NamedIndividual rdf:about="&coeus;entity_Disease">
+    <owl:NamedIndividual rdf:about="&diseasecard;entity_Disease">
         <rdf:type rdf:resource="&coeus;Entity"/>
         <rdfs:label rdf:datatype="&xsd;string">entity_disease</rdfs:label>
         <dc:date rdf:datatype="&xsd;date">2013-05-06</dc:date>
@@ -1406,16 +1407,16 @@
         <dc:description rdf:datatype="&xsd;string">Collects Disease entity knowledge.</dc:description>
         <dc:title rdf:datatype="&xsd;string">Disease</dc:title>
         <dc:creator rdf:datatype="&xsd;string">Pedro Lopes pedrolopes@ua.pt</dc:creator>
-        <isEntityOf rdf:resource="&coeus;concept_OMIM"/>
-        <isEntityOf rdf:resource="&coeus;concept_orphanet"/>
-        <isIncludedIn rdf:resource="&coeus;seed_Diseasecard4"/>
+        <isEntityOf rdf:resource="&diseasecard;concept_OMIM"/>
+        <isEntityOf rdf:resource="&diseasecard;concept_orphanet"/>
+        <isIncludedIn rdf:resource="&diseasecard;seed_Diseasecard4"/>
     </owl:NamedIndividual>    
     
     
     
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/entity_Drug -->
 
-    <owl:NamedIndividual rdf:about="&coeus;entity_Drug">
+    <owl:NamedIndividual rdf:about="&diseasecard;entity_Drug">
         <rdf:type rdf:resource="&coeus;Entity"/>
         <rdfs:label rdf:datatype="&xsd;string">entity_drug</rdfs:label>
         <dc:date rdf:datatype="&xsd;date">2013-05-06</dc:date>
@@ -1424,15 +1425,15 @@
         <dc:description rdf:datatype="&xsd;string">Collects Drug entity knowledge.</dc:description>
         <dc:title rdf:datatype="&xsd;string">Drug</dc:title>
         <dc:creator rdf:datatype="&xsd;string">Pedro Lopes pedrolopes@ua.pt</dc:creator>
-        <isEntityOf rdf:resource="&coeus;concept_PharmGKB"/>
-        <isIncludedIn rdf:resource="&coeus;seed_Diseasecard4"/>
+        <isEntityOf rdf:resource="&diseasecard;concept_PharmGKB"/>
+        <isIncludedIn rdf:resource="&diseasecard;seed_Diseasecard4"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/entity_Locus -->
 
-    <owl:NamedIndividual rdf:about="&coeus;entity_Locus">
+    <owl:NamedIndividual rdf:about="&diseasecard;entity_Locus">
         <rdf:type rdf:resource="&coeus;Entity"/>
         <rdfs:label rdf:datatype="&xsd;string">entity_locus</rdfs:label>
         <dc:date rdf:datatype="&xsd;date">2013-05-06</dc:date>
@@ -1441,18 +1442,18 @@
         <dc:description rdf:datatype="&xsd;string">Collects Locus entity knowledge.</dc:description>
         <dc:title rdf:datatype="&xsd;string">Locus</dc:title>
         <dc:creator rdf:datatype="&xsd;string">Pedro Lopes pedrolopes@ua.pt</dc:creator>
-        <isEntityOf rdf:resource="&coeus;concept_Ensembl"/>
-        <isEntityOf rdf:resource="&coeus;concept_EntrezGene"/>
-        <isEntityOf rdf:resource="&coeus;concept_GeneCards"/>
-        <isEntityOf rdf:resource="&coeus;concept_HGNC"/>
-        <isIncludedIn rdf:resource="&coeus;seed_Diseasecard4"/>
+        <isEntityOf rdf:resource="&diseasecard;concept_Ensembl"/>
+        <isEntityOf rdf:resource="&diseasecard;concept_EntrezGene"/>
+        <isEntityOf rdf:resource="&diseasecard;concept_GeneCards"/>
+        <isEntityOf rdf:resource="&diseasecard;concept_HGNC"/>
+        <isIncludedIn rdf:resource="&diseasecard;seed_Diseasecard4"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/entity_Metabolism -->
 
-    <owl:NamedIndividual rdf:about="&coeus;entity_Metabolism">
+    <owl:NamedIndividual rdf:about="&diseasecard;entity_Metabolism">
         <rdf:type rdf:resource="&coeus;Entity"/>
         <rdfs:label rdf:datatype="&xsd;string">entity_metabolism</rdfs:label>
         <dc:date rdf:datatype="&xsd;string">2013-05-06</dc:date>
@@ -1461,16 +1462,16 @@
         <rdfs:comment rdf:datatype="&xsd;string">Collects Metabolism entity knowledge.</rdfs:comment>
         <dc:title rdf:datatype="&xsd;string">Metabolism</dc:title>
         <dc:creator rdf:datatype="&xsd;string">Pedro Lopes pedrolopes@ua.pt</dc:creator>
-        <isEntityOf rdf:resource="&coeus;concept_ENZYME"/>
-        <isEntityOf rdf:resource="&coeus;concept_KEGG"/>
-        <isIncludedIn rdf:resource="&coeus;seed_Diseasecard4"/>
+        <isEntityOf rdf:resource="&diseasecard;concept_ENZYME"/>
+        <isEntityOf rdf:resource="&diseasecard;concept_KEGG"/>
+        <isIncludedIn rdf:resource="&diseasecard;seed_Diseasecard4"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/entity_Ontology -->
 
-    <owl:NamedIndividual rdf:about="&coeus;entity_Ontology">
+    <owl:NamedIndividual rdf:about="&diseasecard;entity_Ontology">
         <rdf:type rdf:resource="&coeus;Entity"/>
         <rdfs:label rdf:datatype="&xsd;string">entity_ontology</rdfs:label>
         <dc:date rdf:datatype="&xsd;date">2013-05-06</dc:date>
@@ -1479,17 +1480,17 @@
         <dc:description rdf:datatype="&xsd;string">Collects Ontology entity knowledge.</dc:description>
         <dc:title rdf:datatype="&xsd;string">Ontology</dc:title>
         <dc:creator rdf:datatype="&xsd;string">Pedro Lopes pedrolopes@ua.pt</dc:creator>
-        <isEntityOf rdf:resource="&coeus;concept_GO"/>
-        <isEntityOf rdf:resource="&coeus;concept_ICD10"/>
-        <isEntityOf rdf:resource="&coeus;concept_MeSH"/>
-        <isIncludedIn rdf:resource="&coeus;seed_Diseasecard4"/>
+        <isEntityOf rdf:resource="&diseasecard;concept_GO"/>
+        <isEntityOf rdf:resource="&diseasecard;concept_ICD10"/>
+        <isEntityOf rdf:resource="&diseasecard;concept_MeSH"/>
+        <isIncludedIn rdf:resource="&diseasecard;seed_Diseasecard4"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/entity_Protein -->
 
-    <owl:NamedIndividual rdf:about="&coeus;entity_Protein">
+    <owl:NamedIndividual rdf:about="&diseasecard;entity_Protein">
         <rdf:type rdf:resource="&coeus;Entity"/>
         <rdfs:label rdf:datatype="&xsd;string">entity_protein</rdfs:label>
         <dc:date rdf:datatype="&xsd;date">2013-05-06</dc:date>
@@ -1498,18 +1499,18 @@
         <dc:description rdf:datatype="&xsd;string">Collects Protein entity knowledge.</dc:description>
         <dc:creator rdf:datatype="&xsd;string">Pedro Lopes pedrolopes@ua.pt</dc:creator>
         <dc:title rdf:datatype="&xsd;string">Protein</dc:title>
-        <isEntityOf rdf:resource="&coeus;concept_InterPro"/>
-        <isEntityOf rdf:resource="&coeus;concept_PDB"/>
-        <isEntityOf rdf:resource="&coeus;concept_PROSITE"/>
-        <isEntityOf rdf:resource="&coeus;concept_UniProt"/>
-        <isIncludedIn rdf:resource="&coeus;seed_Diseasecard4"/>
+        <isEntityOf rdf:resource="&diseasecard;concept_InterPro"/>
+        <isEntityOf rdf:resource="&diseasecard;concept_PDB"/>
+        <isEntityOf rdf:resource="&diseasecard;concept_PROSITE"/>
+        <isEntityOf rdf:resource="&diseasecard;concept_UniProt"/>
+        <isIncludedIn rdf:resource="&diseasecard;seed_Diseasecard4"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/entity_Study -->
 
-    <owl:NamedIndividual rdf:about="&coeus;entity_Study">
+    <owl:NamedIndividual rdf:about="&diseasecard;entity_Study">
         <rdf:type rdf:resource="&coeus;Entity"/>
         <rdfs:label rdf:datatype="&xsd;string">entity_study</rdfs:label>
         <dc:date rdf:datatype="&xsd;date">2013-05-06</dc:date>
@@ -1518,16 +1519,16 @@
         <rdfs:comment rdf:datatype="&xsd;string">Collects Study entity knowledge.</rdfs:comment>
         <dc:creator rdf:datatype="&xsd;string">Pedro Lopes pedrolopes@ua.pt</dc:creator>
         <dc:title rdf:datatype="&xsd;string">Study</dc:title>
-        <isEntityOf rdf:resource="&coeus;concept_ClinicalTrials"/>
-        <isEntityOf rdf:resource="&coeus;concept_GWASCentral"/>
-        <isIncludedIn rdf:resource="&coeus;seed_Diseasecard4"/>
+        <isEntityOf rdf:resource="&diseasecard;concept_ClinicalTrials"/>
+        <isEntityOf rdf:resource="&diseasecard;concept_GWASCentral"/>
+        <isIncludedIn rdf:resource="&diseasecard;seed_Diseasecard4"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/entity_Variome -->
 
-    <owl:NamedIndividual rdf:about="&coeus;entity_Variome">
+    <owl:NamedIndividual rdf:about="&diseasecard;entity_Variome">
         <rdf:type rdf:resource="&coeus;Entity"/>
         <rdfs:label rdf:datatype="&xsd;string">entity_variome</rdfs:label>
         <dc:date rdf:datatype="&xsd;date">2013-05-06</dc:date>
@@ -1537,29 +1538,29 @@
         <dc:description rdf:datatype="&xsd;string">Variation network umbrella entity.</dc:description>
         <dc:subject rdf:datatype="&xsd;string">Variome</dc:subject>
         <dc:title rdf:datatype="&xsd;string">Variome</dc:title>
-        <isEntityOf rdf:resource="&coeus;concept_LSDB"/>
-        <isIncludedIn rdf:resource="&coeus;seed_Diseasecard4"/>
+        <isEntityOf rdf:resource="&diseasecard;concept_LSDB"/>
+        <isIncludedIn rdf:resource="&diseasecard;seed_Diseasecard4"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/ld_uniprot_id -->
 
-    <owl:Thing rdf:about="&coeus;ld_uniprot_id">
+    <owl:Thing rdf:about="&diseasecard;ld_uniprot_id">
         <rdf:type rdf:resource="&owl;NamedIndividual"/>
         <rdfs:label rdf:datatype="&xsd;string">ld_uniprot_id</rdfs:label>
         <query rdf:datatype="&xsd;string"></query>
         <dc:title rdf:datatype="&xsd;string">UniProt LinkedData</dc:title>
         <property rdf:datatype="&xsd;string">rdfs:seeAlso</property>
-        <loadsFor rdf:resource="&coeus;resource_uniprot_ld"/>
-        <isKeyOf rdf:resource="&coeus;resource_uniprot_ld"/>
+        <loadsFor rdf:resource="&diseasecard;resource_uniprot_ld"/>
+        <isKeyOf rdf:resource="&diseasecard;resource_uniprot_ld"/>
     </owl:Thing>
     
 
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/resource_ClinicalTrials -->
 
-    <owl:NamedIndividual rdf:about="&coeus;resource_ClinicalTrials">
+    <owl:NamedIndividual rdf:about="&diseasecard;resource_ClinicalTrials">
         <rdf:type rdf:resource="&coeus;Resource"/>
         <rdfs:label rdf:datatype="&xsd;string">resource_clinicaltrials</rdfs:label>
         <query rdf:datatype="&xsd;string">//clinical_study</query>
@@ -1573,17 +1574,17 @@
         <method rdf:datatype="&xsd;string">cache</method>
         <endpoint rdf:datatype="&xsd;string">http://clinicaltrials.gov/search?term=#replace#&amp;displayxml=true&amp;count=1000</endpoint>
         <dc:publisher rdf:datatype="&xsd;string">xml</dc:publisher>
-        <isResourceOf rdf:resource="&coeus;concept_ClinicalTrials"/>
-        <extends rdf:resource="&coeus;concept_HGNC"/>
-        <loadsFrom rdf:resource="&coeus;xml_ClinicalTrials_id"/>
-        <hasKey rdf:resource="&coeus;xml_ClinicalTrials_id"/>
+        <isResourceOf rdf:resource="&diseasecard;concept_ClinicalTrials"/>
+        <extends rdf:resource="&diseasecard;concept_HGNC"/>
+        <loadsFrom rdf:resource="&diseasecard;xml_ClinicalTrials_id"/>
+        <hasKey rdf:resource="&diseasecard;xml_ClinicalTrials_id"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/resource_ENZYME -->
 
-    <owl:NamedIndividual rdf:about="&coeus;resource_ENZYME">
+    <owl:NamedIndividual rdf:about="&diseasecard;resource_ENZYME">
         <rdf:type rdf:resource="&coeus;Resource"/>
         <rdfs:label rdf:datatype="&xsd;string">resource_enzyme</rdfs:label>
         <endpoint rdf:datatype="&xsd;string"></endpoint>
@@ -1602,17 +1603,17 @@ where BE.DataTypeId = 30 and P.ProteinId in (select P.ProteinId
 from Protein P inner join Identifier I on I.ProteinId = P.ProteinId
 where P.TaxonomicId = 9606 and I.DataTypeId = 3 and I.Alias like &apos;#replace#&apos;);</query>
         <dc:publisher rdf:datatype="&xsd;string">sql</dc:publisher>
-        <isResourceOf rdf:resource="&coeus;concept_ENZYME"/>
-        <extends rdf:resource="&coeus;concept_UniProt"/>
-        <hasKey rdf:resource="&coeus;sql_ENZYME_id"/>
-        <loadsFrom rdf:resource="&coeus;sql_ENZYME_id"/>
+        <isResourceOf rdf:resource="&diseasecard;concept_ENZYME"/>
+        <extends rdf:resource="&diseasecard;concept_UniProt"/>
+        <hasKey rdf:resource="&diseasecard;sql_ENZYME_id"/>
+        <loadsFrom rdf:resource="&diseasecard;sql_ENZYME_id"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/resource_Ensembl -->
 
-    <owl:NamedIndividual rdf:about="&coeus;resource_Ensembl">
+    <owl:NamedIndividual rdf:about="&diseasecard;resource_Ensembl">
         <rdf:type rdf:resource="&coeus;Resource"/>
         <rdfs:label rdf:datatype="&xsd;string">resource_ensembl</rdfs:label>
         <dc:date rdf:datatype="&xsd;dateTime">2011-04-14</dc:date>
@@ -1626,17 +1627,17 @@ where P.TaxonomicId = 9606 and I.DataTypeId = 3 and I.Alias like &apos;#replace#
         <method rdf:datatype="&xsd;string">cache</method>
         <endpoint rdf:datatype="&xsd;string">jdbc:mysql://localhost:3306/hummer?user=hummer&amp;password=hummer</endpoint>
         <dc:publisher rdf:datatype="&xsd;string">sql</dc:publisher>
-        <isResourceOf rdf:resource="&coeus;concept_Ensembl"/>
-        <extends rdf:resource="&coeus;concept_UniProt"/>
-        <loadsFrom rdf:resource="&coeus;sql_Ensembl_id"/>
-        <hasKey rdf:resource="&coeus;sql_Ensembl_id"/>
+        <isResourceOf rdf:resource="&diseasecard;concept_Ensembl"/>
+        <extends rdf:resource="&diseasecard;concept_UniProt"/>
+        <loadsFrom rdf:resource="&diseasecard;sql_Ensembl_id"/>
+        <hasKey rdf:resource="&diseasecard;sql_Ensembl_id"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/resource_EntrezGene -->
 
-    <owl:NamedIndividual rdf:about="&coeus;resource_EntrezGene">
+    <owl:NamedIndividual rdf:about="&diseasecard;resource_EntrezGene">
         <rdf:type rdf:resource="&coeus;Resource"/>
         <rdfs:label rdf:datatype="&xsd;string">resource_entrez</rdfs:label>
         <order rdf:datatype="&xsd;integer">0</order>
@@ -1650,17 +1651,17 @@ where P.TaxonomicId = 9606 and I.DataTypeId = 3 and I.Alias like &apos;#replace#
         <method rdf:datatype="&xsd;string">cache</method>
         <endpoint rdf:datatype="&xsd;string">jdbc:mysql://localhost:3306/hummer?user=hummer&amp;password=hummer</endpoint>
         <dc:publisher rdf:datatype="&xsd;string">sql</dc:publisher>
-        <isResourceOf rdf:resource="&coeus;concept_EntrezGene"/>
-        <extends rdf:resource="&coeus;concept_OMIM"/>
-        <hasKey rdf:resource="&coeus;sql_EntrezGene_id"/>
-        <loadsFrom rdf:resource="&coeus;sql_EntrezGene_id"/>
+        <isResourceOf rdf:resource="&diseasecard;concept_EntrezGene"/>
+        <extends rdf:resource="&diseasecard;concept_OMIM"/>
+        <hasKey rdf:resource="&diseasecard;sql_EntrezGene_id"/>
+        <loadsFrom rdf:resource="&diseasecard;sql_EntrezGene_id"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/resource_EntrezGene2 -->
 
-    <owl:NamedIndividual rdf:about="&coeus;resource_EntrezGene2">
+    <owl:NamedIndividual rdf:about="&diseasecard;resource_EntrezGene2">
         <rdf:type rdf:resource="&coeus;Resource"/>
         <rdfs:label rdf:datatype="&xsd;string">resource_entrez2</rdfs:label>
         <order rdf:datatype="&xsd;integer">0</order>
@@ -1674,17 +1675,17 @@ where P.TaxonomicId = 9606 and I.DataTypeId = 3 and I.Alias like &apos;#replace#
         <method rdf:datatype="&xsd;string">cache</method>
         <endpoint rdf:datatype="&xsd;string">jdbc:mysql://localhost:3306/hummer?user=hummer&amp;password=hummer</endpoint>
         <dc:publisher rdf:datatype="&xsd;string">sql</dc:publisher>
-        <isResourceOf rdf:resource="&coeus;concept_EntrezGene"/>
-        <extends rdf:resource="&coeus;concept_HGNC"/>
-        <loadsFrom rdf:resource="&coeus;sql_EntrezGene_id"/>
-        <hasKey rdf:resource="&coeus;sql_EntrezGene_id"/>
+        <isResourceOf rdf:resource="&diseasecard;concept_EntrezGene"/>
+        <extends rdf:resource="&diseasecard;concept_HGNC"/>
+        <loadsFrom rdf:resource="&diseasecard;sql_EntrezGene_id"/>
+        <hasKey rdf:resource="&diseasecard;sql_EntrezGene_id"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/resource_GO -->
 
-    <owl:NamedIndividual rdf:about="&coeus;resource_GO">
+    <owl:NamedIndividual rdf:about="&diseasecard;resource_GO">
         <rdf:type rdf:resource="&coeus;Resource"/>
         <rdfs:label rdf:datatype="&xsd;string">resource_go</rdfs:label>
         <dc:date rdf:datatype="&xsd;date">2013-05-03</dc:date>
@@ -1703,17 +1704,17 @@ where (BE.DataTypeId = 135 or BE.DataTypeId = 136 or BE.DataTypeId = 137) and P.
 from Protein P inner join Identifier I on I.ProteinId = P.ProteinId
 where P.TaxonomicId = 9606 and I.DataTypeId = 3 and I.Alias like &apos;#replace#&apos;);</query>
         <dc:publisher rdf:datatype="&xsd;string">sql</dc:publisher>
-        <isResourceOf rdf:resource="&coeus;concept_GO"/>
-        <extends rdf:resource="&coeus;concept_UniProt"/>
-        <loadsFrom rdf:resource="&coeus;sql_GO_id"/>
-        <hasKey rdf:resource="&coeus;sql_GO_id"/>
+        <isResourceOf rdf:resource="&diseasecard;concept_GO"/>
+        <extends rdf:resource="&diseasecard;concept_UniProt"/>
+        <loadsFrom rdf:resource="&diseasecard;sql_GO_id"/>
+        <hasKey rdf:resource="&diseasecard;sql_GO_id"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/resource_GeneCards -->
 
-    <owl:NamedIndividual rdf:about="&coeus;resource_GeneCards">
+    <owl:NamedIndividual rdf:about="&diseasecard;resource_GeneCards">
         <rdf:type rdf:resource="&coeus;Resource"/>
         <rdfs:label rdf:datatype="&xsd;string">resource_genecards</rdfs:label>
         <order rdf:datatype="&xsd;integer">20</order>
@@ -1732,17 +1733,17 @@ where BE.DataTypeId = 114 and P.ProteinId in (select P.ProteinId
 from Protein P inner join Identifier I on I.ProteinId = P.ProteinId
 where P.TaxonomicId = 9606 and I.DataTypeId = 3 and I.Alias like &apos;#replace#&apos;);</query>
         <dc:publisher rdf:datatype="&xsd;string">sql</dc:publisher>
-        <isResourceOf rdf:resource="&coeus;concept_GeneCards"/>
-        <extends rdf:resource="&coeus;concept_UniProt"/>
-        <loadsFrom rdf:resource="&coeus;sql_genecards_id"/>
-        <hasKey rdf:resource="&coeus;sql_genecards_id"/>
+        <isResourceOf rdf:resource="&diseasecard;concept_GeneCards"/>
+        <extends rdf:resource="&diseasecard;concept_UniProt"/>
+        <loadsFrom rdf:resource="&diseasecard;sql_genecards_id"/>
+        <hasKey rdf:resource="&diseasecard;sql_genecards_id"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/resource_InterPro -->
 
-    <owl:NamedIndividual rdf:about="&coeus;resource_InterPro">
+    <owl:NamedIndividual rdf:about="&diseasecard;resource_InterPro">
         <rdf:type rdf:resource="&coeus;Resource"/>
         <rdfs:label rdf:datatype="&xsd;string">resource_interpro</rdfs:label>
         <order rdf:datatype="&xsd;integer">10</order>
@@ -1761,17 +1762,17 @@ where (BE.DataTypeId = 16) and P.ProteinId in (select P.ProteinId
 from Protein P inner join Identifier I on I.ProteinId = P.ProteinId
 where P.TaxonomicId = 9606 and I.DataTypeId = 3 and I.Alias like &apos;#replace#&apos;);</query>
         <dc:publisher rdf:datatype="&xsd;string">sql</dc:publisher>
-        <isResourceOf rdf:resource="&coeus;concept_InterPro"/>
-        <extends rdf:resource="&coeus;concept_UniProt"/>
-        <loadsFrom rdf:resource="&coeus;sql_InterPro_id"/>
-        <hasKey rdf:resource="&coeus;sql_InterPro_id"/>
+        <isResourceOf rdf:resource="&diseasecard;concept_InterPro"/>
+        <extends rdf:resource="&diseasecard;concept_UniProt"/>
+        <loadsFrom rdf:resource="&diseasecard;sql_InterPro_id"/>
+        <hasKey rdf:resource="&diseasecard;sql_InterPro_id"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/resource_KEGG -->
 
-    <owl:NamedIndividual rdf:about="&coeus;resource_KEGG">
+    <owl:NamedIndividual rdf:about="&diseasecard;resource_KEGG">
         <rdf:type rdf:resource="&coeus;Resource"/>
         <rdfs:label rdf:datatype="&xsd;string">resource_kegg</rdfs:label>
         <order rdf:datatype="&xsd;integer">11</order>
@@ -1790,17 +1791,17 @@ where BE.DataTypeId = 11 and P.ProteinId in (select P.ProteinId
 from Protein P inner join Identifier I on I.ProteinId = P.ProteinId
 where P.TaxonomicId = 9606 and I.DataTypeId = 3 and I.Alias like &apos;#replace#&apos;);</query>
         <dc:publisher rdf:datatype="&xsd;string">sql</dc:publisher>
-        <isResourceOf rdf:resource="&coeus;concept_KEGG"/>
-        <extends rdf:resource="&coeus;concept_UniProt"/>
-        <loadsFrom rdf:resource="&coeus;sql_KEGG_id"/>
-        <hasKey rdf:resource="&coeus;sql_KEGG_id"/>
+        <isResourceOf rdf:resource="&diseasecard;concept_KEGG"/>
+        <extends rdf:resource="&diseasecard;concept_UniProt"/>
+        <loadsFrom rdf:resource="&diseasecard;sql_KEGG_id"/>
+        <hasKey rdf:resource="&diseasecard;sql_KEGG_id"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/resource_LSDB -->
 
-    <owl:NamedIndividual rdf:about="&coeus;resource_LSDB">
+    <owl:NamedIndividual rdf:about="&diseasecard;resource_LSDB">
         <rdf:type rdf:resource="&coeus;Resource"/>
         <rdfs:label rdf:datatype="&xsd;string">resource_lsdb</rdfs:label>
         <dc:date rdf:datatype="&xsd;date">2013-05-03</dc:date>
@@ -1814,18 +1815,18 @@ where P.TaxonomicId = 9606 and I.DataTypeId = 3 and I.Alias like &apos;#replace#
         <method rdf:datatype="&xsd;string">cache</method>
         <endpoint rdf:datatype="&xsd;string">jdbc:mysql://localhost:3306/hummer?user=hummer&amp;password=hummer</endpoint>
         <dc:publisher rdf:datatype="&xsd;string">sql</dc:publisher>
-        <extends rdf:resource="&coeus;concept_HGNC"/>
-        <isResourceOf rdf:resource="&coeus;concept_LSDB"/>
-        <loadsFrom rdf:resource="&coeus;sql_lsdb_id"/>
-        <hasKey rdf:resource="&coeus;sql_lsdb_id"/>
-        <loadsFrom rdf:resource="&coeus;sql_lsdb_url"/>
+        <extends rdf:resource="&diseasecard;concept_HGNC"/>
+        <isResourceOf rdf:resource="&diseasecard;concept_LSDB"/>
+        <loadsFrom rdf:resource="&diseasecard;sql_lsdb_id"/>
+        <hasKey rdf:resource="&diseasecard;sql_lsdb_id"/>
+        <loadsFrom rdf:resource="&diseasecard;sql_lsdb_url"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/resource_MeSH -->
 
-    <owl:NamedIndividual rdf:about="&coeus;resource_MeSH">
+    <owl:NamedIndividual rdf:about="&diseasecard;resource_MeSH">
         <rdf:type rdf:resource="&coeus;Resource"/>
         <rdfs:label rdf:datatype="&xsd;string">resource_mesh</rdfs:label>
         <dc:date rdf:datatype="&xsd;dateTime">2013-05-03</dc:date>
@@ -1839,15 +1840,15 @@ where P.TaxonomicId = 9606 and I.DataTypeId = 3 and I.Alias like &apos;#replace#
         <method rdf:datatype="&xsd;string">cache</method>
         <endpoint rdf:datatype="&xsd;string">jdbc:mysql://localhost:3306/hummer?user=hummer&amp;password=hummer</endpoint>
         <dc:publisher rdf:datatype="&xsd;string">sql</dc:publisher>
-        <isResourceOf rdf:resource="&coeus;concept_MeSH"/>
-        <extends rdf:resource="&coeus;concept_UniProt"/>
-        <hasKey rdf:resource="&coeus;sql_MeSH_id"/>
-        <loadsFrom rdf:resource="&coeus;sql_MeSH_id"/>
+        <isResourceOf rdf:resource="&diseasecard;concept_MeSH"/>
+        <extends rdf:resource="&diseasecard;concept_UniProt"/>
+        <hasKey rdf:resource="&diseasecard;sql_MeSH_id"/>
+        <loadsFrom rdf:resource="&diseasecard;sql_MeSH_id"/>
     </owl:NamedIndividual>
     
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/resource_MalaCards -->
 
-    <owl:NamedIndividual rdf:about="&coeus;resource_MalaCards">
+    <owl:NamedIndividual rdf:about="&diseasecard;resource_MalaCards">
         <rdf:type rdf:resource="&coeus;Resource"/>
         <rdfs:label rdf:datatype="&xsd;string">resource_malacards</rdfs:label>
         <dc:date rdf:datatype="&xsd;dateTime">2013-06-24</dc:date>
@@ -1861,15 +1862,15 @@ where P.TaxonomicId = 9606 and I.DataTypeId = 3 and I.Alias like &apos;#replace#
         <method rdf:datatype="&xsd;string">cache</method>
         <endpoint rdf:datatype="&xsd;string">jdbc:mysql://localhost:3306/hummer?user=hummer&amp;password=hummer</endpoint>
         <dc:publisher rdf:datatype="&xsd;string">sql</dc:publisher>
-        <isResourceOf rdf:resource="&coeus;concept_MalaCards"/>
-        <extends rdf:resource="&coeus;concept_OMIM"/>
-        <hasKey rdf:resource="&coeus;sql_MalaCards_id"/>
-        <loadsFrom rdf:resource="&coeus;sql_MalaCards_id"/>
+        <isResourceOf rdf:resource="&diseasecard;concept_MalaCards"/>
+        <extends rdf:resource="&diseasecard;concept_OMIM"/>
+        <hasKey rdf:resource="&diseasecard;sql_MalaCards_id"/>
+        <loadsFrom rdf:resource="&diseasecard;sql_MalaCards_id"/>
     </owl:NamedIndividual>
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/resource_OMIM -->
 
-    <owl:NamedIndividual rdf:about="&coeus;resource_OMIM">
+    <owl:NamedIndividual rdf:about="&diseasecard;resource_OMIM">
         <rdf:type rdf:resource="&coeus;Resource"/>
         <rdfs:label rdf:datatype="&xsd;string">resource_omim</rdfs:label>
         <order rdf:datatype="&xsd;integer">0</order>
@@ -1882,15 +1883,15 @@ where P.TaxonomicId = 9606 and I.DataTypeId = 3 and I.Alias like &apos;#replace#
         <method rdf:datatype="&xsd;string">cache</method>
         <endpoint rdf:datatype="&xsd;string">omim://full</endpoint>
         <dc:publisher rdf:datatype="&xsd;string">plugin</dc:publisher>
-        <extends rdf:resource="&coeus;concept_OMIM"/>
-        <isResourceOf rdf:resource="&coeus;concept_OMIM"/>
+        <extends rdf:resource="&diseasecard;concept_OMIM"/>
+        <isResourceOf rdf:resource="&diseasecard;concept_OMIM"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/resource_PDB -->
 
-    <owl:NamedIndividual rdf:about="&coeus;resource_PDB">
+    <owl:NamedIndividual rdf:about="&diseasecard;resource_PDB">
         <rdf:type rdf:resource="&coeus;Resource"/>
         <rdfs:label rdf:datatype="&xsd;string">resource_pdb</rdfs:label>
         <order rdf:datatype="&xsd;integer">11</order>
@@ -1909,17 +1910,17 @@ where (BE.DataTypeId = 38) and P.ProteinId in (select P.ProteinId
 from Protein P inner join Identifier I on I.ProteinId = P.ProteinId
 where P.TaxonomicId = 9606 and I.DataTypeId = 3 and I.Alias like &apos;#replace#&apos;);</query>
         <dc:publisher rdf:datatype="&xsd;string">sql</dc:publisher>
-        <isResourceOf rdf:resource="&coeus;concept_PDB"/>
-        <extends rdf:resource="&coeus;concept_UniProt"/>
-        <hasKey rdf:resource="&coeus;sql_PDB_id"/>
-        <loadsFrom rdf:resource="&coeus;sql_PDB_id"/>
+        <isResourceOf rdf:resource="&diseasecard;concept_PDB"/>
+        <extends rdf:resource="&diseasecard;concept_UniProt"/>
+        <hasKey rdf:resource="&diseasecard;sql_PDB_id"/>
+        <loadsFrom rdf:resource="&diseasecard;sql_PDB_id"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/resource_PROSITE -->
 
-    <owl:NamedIndividual rdf:about="&coeus;resource_PROSITE">
+    <owl:NamedIndividual rdf:about="&diseasecard;resource_PROSITE">
         <rdf:type rdf:resource="&coeus;Resource"/>
         <rdfs:label rdf:datatype="&xsd;string">resource_prosite</rdfs:label>
         <order rdf:datatype="&xsd;integer">10</order>
@@ -1938,17 +1939,17 @@ where (BE.DataTypeId = 20) and P.ProteinId in (select P.ProteinId
 from Protein P inner join Identifier I on I.ProteinId = P.ProteinId
 where P.TaxonomicId = 9606 and I.DataTypeId = 3 and I.Alias like &apos;#replace#&apos;);</query>
         <dc:publisher rdf:datatype="&xsd;string">sql</dc:publisher>
-        <isResourceOf rdf:resource="&coeus;concept_PROSITE"/>
-        <extends rdf:resource="&coeus;concept_UniProt"/>
-        <hasKey rdf:resource="&coeus;sql_PROSITE_id"/>
-        <loadsFrom rdf:resource="&coeus;sql_PROSITE_id"/>
+        <isResourceOf rdf:resource="&diseasecard;concept_PROSITE"/>
+        <extends rdf:resource="&diseasecard;concept_UniProt"/>
+        <hasKey rdf:resource="&diseasecard;sql_PROSITE_id"/>
+        <loadsFrom rdf:resource="&diseasecard;sql_PROSITE_id"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/resource_PharmGKB -->
 
-    <owl:NamedIndividual rdf:about="&coeus;resource_PharmGKB">
+    <owl:NamedIndividual rdf:about="&diseasecard;resource_PharmGKB">
         <rdf:type rdf:resource="&coeus;Resource"/>
         <rdfs:label rdf:datatype="&xsd;string">resource_pharmgkb</rdfs:label>
         <order rdf:datatype="&xsd;integer">11</order>
@@ -1967,17 +1968,17 @@ where BE.DataTypeId = 36 and P.ProteinId in (select P.ProteinId
 from Protein P inner join Identifier I on I.ProteinId = P.ProteinId
 where P.TaxonomicId = 9606 and I.DataTypeId = 3 and I.Alias like &apos;#replace#&apos;);</query>
         <dc:publisher rdf:datatype="&xsd;string">sql</dc:publisher>
-        <isResourceOf rdf:resource="&coeus;concept_PharmGKB"/>
-        <extends rdf:resource="&coeus;concept_UniProt"/>
-        <loadsFrom rdf:resource="&coeus;sql_PharmGKB_id"/>
-        <hasKey rdf:resource="&coeus;sql_PharmGKB_id"/>
+        <isResourceOf rdf:resource="&diseasecard;concept_PharmGKB"/>
+        <extends rdf:resource="&diseasecard;concept_UniProt"/>
+        <loadsFrom rdf:resource="&diseasecard;sql_PharmGKB_id"/>
+        <hasKey rdf:resource="&diseasecard;sql_PharmGKB_id"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/resource_UniProt -->
 
-    <owl:NamedIndividual rdf:about="&coeus;resource_UniProt">
+    <owl:NamedIndividual rdf:about="&diseasecard;resource_UniProt">
         <rdf:type rdf:resource="&coeus;Resource"/>
         <rdfs:label>resource_uniprot</rdfs:label>
         <order rdf:datatype="&xsd;integer">2</order>
@@ -1990,18 +1991,18 @@ where P.TaxonomicId = 9606 and I.DataTypeId = 3 and I.Alias like &apos;#replace#
         <method rdf:datatype="&xsd;string">cache</method>
         <dc:publisher rdf:datatype="&xsd;string">csv</dc:publisher>
         <endpoint rdf:datatype="&xsd;string">http://www.uniprot.org/uniprot/?query=#replace#+AND+taxonomy%3a%22Homo+sapiens+%5b9606%5d%22+AND+reviewed%3ayes+AND+active%3ayes&amp;format=tab&amp;columns=id,entry%20name,reviewed,protein%20names,genes,organism,length</endpoint>
-        <extends rdf:resource="&coeus;concept_OMIM"/>
-        <extends rdf:resource="&coeus;concept_UniProt"/>
-        <isResourceOf rdf:resource="&coeus;concept_UniProt"/>
-        <loadsFrom rdf:resource="&coeus;csv_UniProt_id"/>
-        <hasKey rdf:resource="&coeus;csv_UniProt_id"/>
+        <extends rdf:resource="&diseasecard;concept_OMIM"/>
+        <extends rdf:resource="&diseasecard;concept_UniProt"/>
+        <isResourceOf rdf:resource="&diseasecard;concept_UniProt"/>
+        <loadsFrom rdf:resource="&diseasecard;csv_UniProt_id"/>
+        <hasKey rdf:resource="&diseasecard;csv_UniProt_id"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/resource_gwascentral -->
 
-    <owl:NamedIndividual rdf:about="&coeus;resource_gwascentral">
+    <owl:NamedIndividual rdf:about="&diseasecard;resource_gwascentral">
         <rdf:type rdf:resource="&coeus;Resource"/>
         <rdfs:label rdf:datatype="&xsd;string">resource_gwascentral</rdfs:label>
         <order rdf:datatype="&xsd;int">1</order>
@@ -2014,17 +2015,17 @@ where P.TaxonomicId = 9606 and I.DataTypeId = 3 and I.Alias like &apos;#replace#
         <method rdf:datatype="&xsd;string">cache</method>
         <dc:publisher rdf:datatype="&xsd;string">csv</dc:publisher>
         <endpoint rdf:datatype="&xsd;string">http://www.gwascentral.org/studies?q=#replace#&amp;format=csv&amp;t=1</endpoint>
-        <isResourceOf rdf:resource="&coeus;concept_GWASCentral"/>
-        <extends rdf:resource="&coeus;concept_HGNC"/>
-        <loadsFrom rdf:resource="&coeus;csv_gwascentral_id"/>
-        <hasKey rdf:resource="&coeus;csv_gwascentral_id"/>
+        <isResourceOf rdf:resource="&diseasecard;concept_GWASCentral"/>
+        <extends rdf:resource="&diseasecard;concept_HGNC"/>
+        <loadsFrom rdf:resource="&diseasecard;csv_gwascentral_id"/>
+        <hasKey rdf:resource="&diseasecard;csv_gwascentral_id"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/resource_icd10 -->
 
-    <owl:NamedIndividual rdf:about="&coeus;resource_icd10">
+    <owl:NamedIndividual rdf:about="&diseasecard;resource_icd10">
         <rdf:type rdf:resource="&coeus;Resource"/>
         <rdfs:label rdf:datatype="&xsd;string">resource_icd10</rdfs:label>
         <order rdf:datatype="&xsd;int">10</order>
@@ -2037,17 +2038,17 @@ where P.TaxonomicId = 9606 and I.DataTypeId = 3 and I.Alias like &apos;#replace#
         <method rdf:datatype="&xsd;string">cache</method>
         <endpoint rdf:datatype="&xsd;string">jdbc:mysql://localhost:3306/hummer?user=hummer&amp;password=hummer</endpoint>
         <dc:publisher rdf:datatype="&xsd;string">sql</dc:publisher>
-        <isResourceOf rdf:resource="&coeus;concept_ICD10"/>
-        <extends rdf:resource="&coeus;concept_orphanet"/>
-        <hasKey rdf:resource="&coeus;sql_icd10_id"/>
-        <loadsFrom rdf:resource="&coeus;sql_icd10_id"/>
+        <isResourceOf rdf:resource="&diseasecard;concept_ICD10"/>
+        <extends rdf:resource="&diseasecard;concept_orphanet"/>
+        <hasKey rdf:resource="&diseasecard;sql_icd10_id"/>
+        <loadsFrom rdf:resource="&diseasecard;sql_icd10_id"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/resource_orphanet -->
 
-    <owl:NamedIndividual rdf:about="&coeus;resource_orphanet">
+    <owl:NamedIndividual rdf:about="&diseasecard;resource_orphanet">
         <rdf:type rdf:resource="&coeus;Resource"/>
         <rdfs:label rdf:datatype="&xsd;string">resource_orphanet</rdfs:label>
         <dc:date rdf:datatype="&xsd;date">2013-05-02</dc:date>
@@ -2061,17 +2062,17 @@ where P.TaxonomicId = 9606 and I.DataTypeId = 3 and I.Alias like &apos;#replace#
         <method rdf:datatype="&xsd;string">cache</method>
         <endpoint rdf:datatype="&xsd;string">jdbc:mysql://localhost:3306/hummer?user=hummer&amp;password=hummer</endpoint>
         <dc:publisher rdf:datatype="&xsd;string">sql</dc:publisher>
-        <extends rdf:resource="&coeus;concept_OMIM"/>
-        <isResourceOf rdf:resource="&coeus;concept_orphanet"/>
-        <loadsFrom rdf:resource="&coeus;sql_orphanet_id"/>
-        <hasKey rdf:resource="&coeus;sql_orphanet_id"/>
+        <extends rdf:resource="&diseasecard;concept_OMIM"/>
+        <isResourceOf rdf:resource="&diseasecard;concept_orphanet"/>
+        <loadsFrom rdf:resource="&diseasecard;sql_orphanet_id"/>
+        <hasKey rdf:resource="&diseasecard;sql_orphanet_id"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/resource_uniprot_ld -->
 
-    <owl:NamedIndividual rdf:about="&coeus;resource_uniprot_ld">
+    <owl:NamedIndividual rdf:about="&diseasecard;resource_uniprot_ld">
         <rdf:type rdf:resource="&coeus;Resource"/>
         <rdfs:label rdf:datatype="&xsd;string">resource_uniprot_ld</rdfs:label>
         <query rdf:datatype="&xsd;string"></query>
@@ -2086,10 +2087,10 @@ where P.TaxonomicId = 9606 and I.DataTypeId = 3 and I.Alias like &apos;#replace#
         <endpoint rdf:datatype="&xsd;string">http://purl.uniprot.org/uniprot/#replace#</endpoint>
         <dc:publisher rdf:datatype="&xsd;string">ld</dc:publisher>
         <method rdf:datatype="&xsd;string">map</method>
-        <isResourceOf rdf:resource="&coeus;concept_UniProt"/>
-        <extends rdf:resource="&coeus;concept_UniProt"/>
-        <hasKey rdf:resource="&coeus;ld_uniprot_id"/>
-        <loadsFrom rdf:resource="&coeus;ld_uniprot_id"/>
+        <isResourceOf rdf:resource="&diseasecard;concept_UniProt"/>
+        <extends rdf:resource="&diseasecard;concept_UniProt"/>
+        <hasKey rdf:resource="&diseasecard;ld_uniprot_id"/>
+        <loadsFrom rdf:resource="&diseasecard;ld_uniprot_id"/>
     </owl:NamedIndividual>
     
 
@@ -2100,7 +2101,7 @@ where P.TaxonomicId = 9606 and I.DataTypeId = 3 and I.Alias like &apos;#replace#
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/sql_ENZYME_id -->
 
-    <owl:NamedIndividual rdf:about="&coeus;sql_ENZYME_id">
+    <owl:NamedIndividual rdf:about="&diseasecard;sql_ENZYME_id">
         <rdf:type rdf:resource="&coeus;SQL"/>
         <rdfs:label rdf:datatype="&xsd;string">sql_enzyme_id</rdfs:label>
         <owl:versionInfo rdf:datatype="&xsd;string">4.2</owl:versionInfo>
@@ -2112,15 +2113,15 @@ where P.TaxonomicId = 9606 and I.DataTypeId = 3 and I.Alias like &apos;#replace#
         <property rdf:datatype="&xsd;string">dc:identifier|dc:title</property>
         <query rdf:datatype="&xsd;string">entry</query>
         <dc:date rdf:datatype="&xsd;string">jdbc:sqlserver://sql2k8-ua.servers.ua.pt;database=ieeta-gens2;user=gensdbo;password=xgsJ38Doa1qi.F4e</dc:date>
-        <isKeyOf rdf:resource="&coeus;resource_ENZYME"/>
-        <loadsFor rdf:resource="&coeus;resource_ENZYME"/>
+        <isKeyOf rdf:resource="&diseasecard;resource_ENZYME"/>
+        <loadsFor rdf:resource="&diseasecard;resource_ENZYME"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/sql_Ensembl_id -->
 
-    <owl:NamedIndividual rdf:about="&coeus;sql_Ensembl_id">
+    <owl:NamedIndividual rdf:about="&diseasecard;sql_Ensembl_id">
         <rdf:type rdf:resource="&coeus;SQL"/>
         <rdfs:label rdf:datatype="&xsd;string">sql_ensembl_id</rdfs:label>
         <dc:date rdf:datatype="&xsd;dateTime">2011-04-14</dc:date>
@@ -2131,15 +2132,15 @@ where P.TaxonomicId = 9606 and I.DataTypeId = 3 and I.Alias like &apos;#replace#
         <dc:creator rdf:datatype="&xsd;string">Pedro Lopes pedrolopes@ua.pt</dc:creator>
         <property rdf:datatype="&xsd;string">dc:title|dc:identifier</property>
         <query rdf:datatype="&xsd;string">entry</query>
-        <loadsFor rdf:resource="&coeus;resource_Ensembl"/>
-        <isKeyOf rdf:resource="&coeus;resource_Ensembl"/>
+        <loadsFor rdf:resource="&diseasecard;resource_Ensembl"/>
+        <isKeyOf rdf:resource="&diseasecard;resource_Ensembl"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/sql_EntrezGene_id -->
 
-    <owl:NamedIndividual rdf:about="&coeus;sql_EntrezGene_id">
+    <owl:NamedIndividual rdf:about="&diseasecard;sql_EntrezGene_id">
         <rdf:type rdf:resource="&coeus;SQL"/>
         <rdfs:label rdf:datatype="&xsd;string">sql_entrezgene_id</rdfs:label>
         <dc:date rdf:datatype="&xsd;dateTime">2013-05-08</dc:date>
@@ -2150,32 +2151,32 @@ where P.TaxonomicId = 9606 and I.DataTypeId = 3 and I.Alias like &apos;#replace#
         <dc:creator rdf:datatype="&xsd;string">Pedro Lopes pedrolopes@ua.pt</dc:creator>
         <property rdf:datatype="&xsd;string">dc:identifier|dc:source</property>
         <query rdf:datatype="&xsd;string">entry</query>
-        <isKeyOf rdf:resource="&coeus;resource_EntrezGene"/>
-        <loadsFor rdf:resource="&coeus;resource_EntrezGene"/>
-        <isKeyOf rdf:resource="&coeus;resource_EntrezGene2"/>
-        <loadsFor rdf:resource="&coeus;resource_EntrezGene2"/>
+        <isKeyOf rdf:resource="&diseasecard;resource_EntrezGene"/>
+        <loadsFor rdf:resource="&diseasecard;resource_EntrezGene"/>
+        <isKeyOf rdf:resource="&diseasecard;resource_EntrezGene2"/>
+        <loadsFor rdf:resource="&diseasecard;resource_EntrezGene2"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/sql_GO_id -->
 
-    <owl:NamedIndividual rdf:about="&coeus;sql_GO_id">
+    <owl:NamedIndividual rdf:about="&diseasecard;sql_GO_id">
         <rdf:type rdf:resource="&coeus;SQL"/>
         <rdfs:label rdf:datatype="&xsd;string">sql_go_id</rdfs:label>
         <owl:versionInfo rdf:datatype="&xsd;string">4.2</owl:versionInfo>
         <dc:title rdf:datatype="&xsd;string">GO identifier</dc:title>
         <property rdf:datatype="&xsd;string">dc:identifier|dc:title</property>
         <query rdf:datatype="&xsd;string">entry</query>
-        <isKeyOf rdf:resource="&coeus;resource_GO"/>
-        <loadsFor rdf:resource="&coeus;resource_GO"/>
+        <isKeyOf rdf:resource="&diseasecard;resource_GO"/>
+        <loadsFor rdf:resource="&diseasecard;resource_GO"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/sql_InterPro_id -->
 
-    <owl:NamedIndividual rdf:about="&coeus;sql_InterPro_id">
+    <owl:NamedIndividual rdf:about="&diseasecard;sql_InterPro_id">
         <rdf:type rdf:resource="&coeus;SQL"/>
         <rdfs:label rdf:datatype="&xsd;string">sql_interpro_id</rdfs:label>
         <dc:date rdf:datatype="&xsd;dateTime">2013-05-03</dc:date>
@@ -2186,15 +2187,15 @@ where P.TaxonomicId = 9606 and I.DataTypeId = 3 and I.Alias like &apos;#replace#
         <dc:creator rdf:datatype="&xsd;string">Pedro Lopes pedrolopes@ua.pt</dc:creator>
         <property rdf:datatype="&xsd;string">dc:identifier|dc:title</property>
         <query rdf:datatype="&xsd;string">entry</query>
-        <loadsFor rdf:resource="&coeus;resource_InterPro"/>
-        <isKeyOf rdf:resource="&coeus;resource_InterPro"/>
+        <loadsFor rdf:resource="&diseasecard;resource_InterPro"/>
+        <isKeyOf rdf:resource="&diseasecard;resource_InterPro"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/sql_KEGG_id -->
 
-    <owl:NamedIndividual rdf:about="&coeus;sql_KEGG_id">
+    <owl:NamedIndividual rdf:about="&diseasecard;sql_KEGG_id">
         <rdf:type rdf:resource="&coeus;SQL"/>
         <rdfs:label rdf:datatype="&xsd;string">sql_kegg_id</rdfs:label>
         <dc:date rdf:datatype="&xsd;dateTime">2013-05-03</dc:date>
@@ -2205,13 +2206,13 @@ where P.TaxonomicId = 9606 and I.DataTypeId = 3 and I.Alias like &apos;#replace#
         <dc:creator rdf:datatype="&xsd;string">Pedro Lopes pedrolopes@ua.pt</dc:creator>
         <property rdf:datatype="&xsd;string">dc:title|dc:identifier</property>
         <query rdf:datatype="&xsd;string">entry</query>
-        <isKeyOf rdf:resource="&coeus;resource_KEGG"/>
-        <loadsFor rdf:resource="&coeus;resource_KEGG"/>
+        <isKeyOf rdf:resource="&diseasecard;resource_KEGG"/>
+        <loadsFor rdf:resource="&diseasecard;resource_KEGG"/>
     </owl:NamedIndividual>
     
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/sql_MalaCards_id -->
 
-    <owl:NamedIndividual rdf:about="&coeus;sql_MalaCards_id">
+    <owl:NamedIndividual rdf:about="&diseasecard;sql_MalaCards_id">
         <rdf:type rdf:resource="&coeus;SQL"/>
         <rdfs:label rdf:datatype="&xsd;string">sql_malacards_id</rdfs:label>
         <dc:date rdf:datatype="&xsd;dateTime">2013-06-24</dc:date>
@@ -2222,13 +2223,13 @@ where P.TaxonomicId = 9606 and I.DataTypeId = 3 and I.Alias like &apos;#replace#
         <dc:creator rdf:datatype="&xsd;string">Pedro Lopes pedrolopes@ua.pt</dc:creator>
         <property rdf:datatype="&xsd;string">dc:identifier|dc:title</property>
         <query rdf:datatype="&xsd;string">entry</query>
-        <loadsFor rdf:resource="&coeus;resource_MalaCards"/>
-        <isKeyOf rdf:resource="&coeus;resource_MalaCards"/>
+        <loadsFor rdf:resource="&diseasecard;resource_MalaCards"/>
+        <isKeyOf rdf:resource="&diseasecard;resource_MalaCards"/>
     </owl:NamedIndividual>
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/sql_MeSH_id -->
 
-    <owl:NamedIndividual rdf:about="&coeus;sql_MeSH_id">
+    <owl:NamedIndividual rdf:about="&diseasecard;sql_MeSH_id">
         <rdf:type rdf:resource="&coeus;SQL"/>
         <rdfs:label rdf:datatype="&xsd;string">sql_mesh_id</rdfs:label>
         <dc:date rdf:datatype="&xsd;dateTime">2013-05-03</dc:date>
@@ -2240,15 +2241,15 @@ where P.TaxonomicId = 9606 and I.DataTypeId = 3 and I.Alias like &apos;#replace#
         <regex rdf:datatype="&xsd;string">[D][0-9]{6}</regex>
         <property rdf:datatype="&xsd;string">dc:identifier|dc:title</property>
         <query rdf:datatype="&xsd;string">entry</query>
-        <loadsFor rdf:resource="&coeus;resource_MeSH"/>
-        <isKeyOf rdf:resource="&coeus;resource_MeSH"/>
+        <loadsFor rdf:resource="&diseasecard;resource_MeSH"/>
+        <isKeyOf rdf:resource="&diseasecard;resource_MeSH"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/sql_PDB_id -->
 
-    <owl:NamedIndividual rdf:about="&coeus;sql_PDB_id">
+    <owl:NamedIndividual rdf:about="&diseasecard;sql_PDB_id">
         <rdf:type rdf:resource="&coeus;SQL"/>
         <rdfs:label rdf:datatype="&xsd;string">sql_pdb_id</rdfs:label>
         <dc:date rdf:datatype="&xsd;date">2013-05-03</dc:date>
@@ -2259,15 +2260,15 @@ where P.TaxonomicId = 9606 and I.DataTypeId = 3 and I.Alias like &apos;#replace#
         <dc:description rdf:datatype="&xsd;string">SQL loader for PDB id.</dc:description>
         <property rdf:datatype="&xsd;string">dc:title|dc:identifier</property>
         <query rdf:datatype="&xsd;string">entry</query>
-        <loadsFor rdf:resource="&coeus;resource_PDB"/>
-        <isKeyOf rdf:resource="&coeus;resource_PDB"/>
+        <loadsFor rdf:resource="&diseasecard;resource_PDB"/>
+        <isKeyOf rdf:resource="&diseasecard;resource_PDB"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/sql_PROSITE_id -->
 
-    <owl:NamedIndividual rdf:about="&coeus;sql_PROSITE_id">
+    <owl:NamedIndividual rdf:about="&diseasecard;sql_PROSITE_id">
         <rdf:type rdf:resource="&coeus;SQL"/>
         <rdfs:label rdf:datatype="&xsd;string">sql_prosite_id</rdfs:label>
         <dc:date rdf:datatype="&xsd;dateTime">2013-05-03</dc:date>
@@ -2277,15 +2278,15 @@ where P.TaxonomicId = 9606 and I.DataTypeId = 3 and I.Alias like &apos;#replace#
         <dc:creator rdf:datatype="&xsd;string">Pedro Lopes pedrolopes@ua.pt</dc:creator>
         <property rdf:datatype="&xsd;string">dc:identifier|dc:title</property>
         <query rdf:datatype="&xsd;string">entry</query>
-        <loadsFor rdf:resource="&coeus;resource_PROSITE"/>
-        <isKeyOf rdf:resource="&coeus;resource_PROSITE"/>
+        <loadsFor rdf:resource="&diseasecard;resource_PROSITE"/>
+        <isKeyOf rdf:resource="&diseasecard;resource_PROSITE"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/sql_PharmGKB_id -->
 
-    <owl:NamedIndividual rdf:about="&coeus;sql_PharmGKB_id">
+    <owl:NamedIndividual rdf:about="&diseasecard;sql_PharmGKB_id">
         <rdf:type rdf:resource="&coeus;SQL"/>
         <rdfs:label rdf:datatype="&xsd;string">sql_pharmgkb_id</rdfs:label>
         <dc:date rdf:datatype="&xsd;dateTime">2013-05-03</dc:date>
@@ -2296,15 +2297,15 @@ where P.TaxonomicId = 9606 and I.DataTypeId = 3 and I.Alias like &apos;#replace#
         <dc:title rdf:datatype="&xsd;string">PharmGKB_id</dc:title>
         <property rdf:datatype="&xsd;string">dc:identifier|dc:title</property>
         <query rdf:datatype="&xsd;string">entry</query>
-        <isKeyOf rdf:resource="&coeus;resource_PharmGKB"/>
-        <loadsFor rdf:resource="&coeus;resource_PharmGKB"/>
+        <isKeyOf rdf:resource="&diseasecard;resource_PharmGKB"/>
+        <loadsFor rdf:resource="&diseasecard;resource_PharmGKB"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/sql_genecards_id -->
 
-    <owl:NamedIndividual rdf:about="&coeus;sql_genecards_id">
+    <owl:NamedIndividual rdf:about="&diseasecard;sql_genecards_id">
         <rdf:type rdf:resource="&coeus;SQL"/>
         <rdfs:label rdf:datatype="&xsd;string">sql_genecards_id</rdfs:label>
         <dc:title rdf:datatype="&xsd;string">GeneCards id</dc:title>
@@ -2313,15 +2314,15 @@ where P.TaxonomicId = 9606 and I.DataTypeId = 3 and I.Alias like &apos;#replace#
         <dc:description rdf:datatype="&xsd;string">SQL identifier for GeneCards mappings.</dc:description>
         <property rdf:datatype="&xsd;string">dc:identifier|dc:title</property>
         <query rdf:datatype="&xsd;string">entry</query>
-        <loadsFor rdf:resource="&coeus;resource_GeneCards"/>
-        <isKeyOf rdf:resource="&coeus;resource_GeneCards"/>
+        <loadsFor rdf:resource="&diseasecard;resource_GeneCards"/>
+        <isKeyOf rdf:resource="&diseasecard;resource_GeneCards"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/sql_icd10_id -->
 
-    <owl:NamedIndividual rdf:about="&coeus;sql_icd10_id">
+    <owl:NamedIndividual rdf:about="&diseasecard;sql_icd10_id">
         <rdf:type rdf:resource="&coeus;SQL"/>
         <rdfs:label rdf:datatype="&xsd;string">sql_icd10_id</rdfs:label>
         <owl:versionInfo rdf:datatype="&xsd;string">4.1a</owl:versionInfo>
@@ -2331,15 +2332,15 @@ where P.TaxonomicId = 9606 and I.DataTypeId = 3 and I.Alias like &apos;#replace#
         <dc:description rdf:datatype="&xsd;string">SQL loader for ICD 10 ontology data.</dc:description>
         <property rdf:datatype="&xsd;string">dc:title|dc:identifier</property>
         <query rdf:datatype="&xsd;string">entry</query>
-        <loadsFor rdf:resource="&coeus;resource_icd10"/>
-        <isKeyOf rdf:resource="&coeus;resource_icd10"/>
+        <loadsFor rdf:resource="&diseasecard;resource_icd10"/>
+        <isKeyOf rdf:resource="&diseasecard;resource_icd10"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/sql_lsdb_id -->
 
-    <owl:NamedIndividual rdf:about="&coeus;sql_lsdb_id">
+    <owl:NamedIndividual rdf:about="&diseasecard;sql_lsdb_id">
         <rdf:type rdf:resource="&coeus;SQL"/>
         <rdfs:label rdf:datatype="&xsd;string">sql_lsdb_id</rdfs:label>
         <owl:versionInfo rdf:datatype="&xsd;string">4.2</owl:versionInfo>
@@ -2349,15 +2350,15 @@ where P.TaxonomicId = 9606 and I.DataTypeId = 3 and I.Alias like &apos;#replace#
         <dc:description rdf:datatype="&xsd;string">SQL id loader for LSDB</dc:description>
         <property rdf:datatype="&xsd;string">dc:identifier|dc:title</property>
         <query rdf:datatype="&xsd;string">id</query>
-        <isKeyOf rdf:resource="&coeus;resource_LSDB"/>
-        <loadsFor rdf:resource="&coeus;resource_LSDB"/>
+        <isKeyOf rdf:resource="&diseasecard;resource_LSDB"/>
+        <loadsFor rdf:resource="&diseasecard;resource_LSDB"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/sql_lsdb_url -->
 
-    <owl:NamedIndividual rdf:about="&coeus;sql_lsdb_url">
+    <owl:NamedIndividual rdf:about="&diseasecard;sql_lsdb_url">
         <rdf:type rdf:resource="&coeus;SQL"/>
         <rdfs:label rdf:datatype="&xsd;string">sql_lsdb_url</rdfs:label>
         <owl:versionInfo rdf:datatype="&xsd;string">4.2</owl:versionInfo>
@@ -2367,14 +2368,14 @@ where P.TaxonomicId = 9606 and I.DataTypeId = 3 and I.Alias like &apos;#replace#
         <dc:description rdf:datatype="&xsd;string">SQL id loader for LSDB</dc:description>
         <property rdf:datatype="&xsd;string">dc:description</property>
         <query rdf:datatype="&xsd;string">url</query>
-        <loadsFor rdf:resource="&coeus;resource_LSDB"/>
+        <loadsFor rdf:resource="&diseasecard;resource_LSDB"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/sql_orphanet_id -->
 
-    <owl:NamedIndividual rdf:about="&coeus;sql_orphanet_id">
+    <owl:NamedIndividual rdf:about="&diseasecard;sql_orphanet_id">
         <rdf:type rdf:resource="&coeus;SQL"/>
         <rdfs:label rdf:datatype="&xsd;string">sql_orphanet_id</rdfs:label>
         <dc:date rdf:datatype="&xsd;date">2013-05-02</dc:date>
@@ -2384,15 +2385,15 @@ where P.TaxonomicId = 9606 and I.DataTypeId = 3 and I.Alias like &apos;#replace#
         <dc:description rdf:datatype="&xsd;string">SQL loader for OrphaNet data.</dc:description>
         <property rdf:datatype="&xsd;string">dc:title|dc:identifier</property>
         <query rdf:datatype="&xsd;string">entry</query>
-        <isKeyOf rdf:resource="&coeus;resource_orphanet"/>
-        <loadsFor rdf:resource="&coeus;resource_orphanet"/>
+        <isKeyOf rdf:resource="&diseasecard;resource_orphanet"/>
+        <loadsFor rdf:resource="&diseasecard;resource_orphanet"/>
     </owl:NamedIndividual>
     
 
 
     <!-- http://bioinformatics.ua.pt/diseasecard/resource/xml_ClinicalTrials_id -->
 
-    <owl:NamedIndividual rdf:about="&coeus;xml_ClinicalTrials_id">
+    <owl:NamedIndividual rdf:about="&diseasecard;xml_ClinicalTrials_id">
         <rdf:type rdf:resource="&coeus;XML"/>
         <rdfs:label rdf:datatype="&xsd;string">xml_clinicaltrials_id</rdfs:label>
         <query rdf:datatype="&xsd;string">//nct_id</query>
@@ -2403,14 +2404,14 @@ where P.TaxonomicId = 9606 and I.DataTypeId = 3 and I.Alias like &apos;#replace#
         <dc:description rdf:datatype="&xsd;string">Setup for loading ClinicalTrials info: loads id.</dc:description>
         <rdfs:comment rdf:datatype="&xsd;string">Setup for loading ClinicalTrials info: loads id.</rdfs:comment>
         <property rdf:datatype="&xsd;string">dc:identifier</property>
-        <isKeyOf rdf:resource="&coeus;resource_ClinicalTrials"/>
-        <loadsFor rdf:resource="&coeus;resource_ClinicalTrials"/>
+        <isKeyOf rdf:resource="&diseasecard;resource_ClinicalTrials"/>
+        <loadsFor rdf:resource="&diseasecard;resource_ClinicalTrials"/>
     </owl:NamedIndividual>
     
     
      <!-- http://bioinformatics.ua.pt/diseasecard/resource/seed_Diseasecard4 -->
 
-    <owl:NamedIndividual rdf:about="&coeus;seed_Diseasecard4">
+    <owl:NamedIndividual rdf:about="&diseasecard;seed_Diseasecard4">
         <rdf:type rdf:resource="&coeus;Seed"/>
         <rdfs:label rdf:datatype="&xsd;string">seed_diseasecard</rdfs:label>
         <dc:date rdf:datatype="&xsd;date">2013-05-06</dc:date>
@@ -2421,13 +2422,13 @@ where P.TaxonomicId = 9606 and I.DataTypeId = 3 and I.Alias like &apos;#replace#
         <dc:description rdf:datatype="&xsd;string">Diseasecard4 COEUS instance</dc:description>
         <dc:creator rdf:datatype="&xsd;string">Pedro Lopes</dc:creator>
         <dc:source rdf:datatype="&xsd;string">UA.PT Bioinformatics</dc:source>
-        <includes rdf:resource="&coeus;entity_Disease"/>
-        <includes rdf:resource="&coeus;entity_Drug"/>
-        <includes rdf:resource="&coeus;entity_Locus"/>
-        <includes rdf:resource="&coeus;entity_Metabolism"/>
-        <includes rdf:resource="&coeus;entity_Ontology"/>
-        <includes rdf:resource="&coeus;entity_Protein"/>
-        <includes rdf:resource="&coeus;entity_Study"/>
+        <includes rdf:resource="&diseasecard;entity_Disease"/>
+        <includes rdf:resource="&diseasecard;entity_Drug"/>
+        <includes rdf:resource="&diseasecard;entity_Locus"/>
+        <includes rdf:resource="&diseasecard;entity_Metabolism"/>
+        <includes rdf:resource="&diseasecard;entity_Ontology"/>
+        <includes rdf:resource="&diseasecard;entity_Protein"/>
+        <includes rdf:resource="&diseasecard;entity_Study"/>
     </owl:NamedIndividual>
     
     

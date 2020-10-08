@@ -47,11 +47,11 @@
             }
 
             function queryConcepts(entity) {
-                var qConcepts = "SELECT DISTINCT ?concept {?concept coeus:hasEntity coeus:" + entity + " }";
+                var qConcepts = "SELECT DISTINCT ?concept {?concept coeus:hasEntity diseasecard:" + entity + " }";
                 queryToResult(qConcepts, fillConcepts.bind(this, entity));
             }
             function queryResources(concept) {
-                var qResources = "SELECT DISTINCT ?resource {?resource coeus:isResourceOf coeus:" + concept + " }";
+                var qResources = "SELECT DISTINCT ?resource {?resource coeus:isResourceOf diseasecard:" + concept + " }";
                 queryToResult(qResources, fillResources.bind(this, concept));
             }
 

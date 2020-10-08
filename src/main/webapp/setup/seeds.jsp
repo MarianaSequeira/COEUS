@@ -48,7 +48,11 @@
                 // fill Seeds
                 $('#seeds').html('');
                 for (var key = 0, size = result.length; key < size; key++) {
+                    
+                    console.log(result[key].seed.value);
+                    
                     var splitedURI = splitURIPrefix(result[key].seed.value);
+                    
                     var seed = getPrefix(splitedURI.namespace) + ':' + splitedURI.value;
 
                     var a = '<div class="col-sm-6 col-md-5"><div class="thumbnail"><div class="caption clearfix">'

@@ -100,6 +100,7 @@ public class API {
     public ResultSet selectRS(String query, boolean inferred) {
         ResultSet response = null;
         try {
+            //System.out.println(PrefixFactory.allToString());
             String sparqlQuery = PrefixFactory.allToString() + query;
             QueryExecution qe = null;
 
@@ -160,6 +161,7 @@ public class API {
     public String getIndividual(String individual, String format) {
         String response = "";
         try {
+            System.out.println(PrefixFactory.allToString());
             String sparqlQuery = PrefixFactory.allToString() + "SELECT ?pred ?obj WHERE  { coeus:" + individual + " ?pred ?obj}";
             QueryExecution qe = QueryExecutionFactory.create(sparqlQuery, model);
             response = execute(qe, format);
