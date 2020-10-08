@@ -88,13 +88,14 @@ public class OMIMPlugin {
      * </ul></p>
      *
      */
-    public void itemize() {
+    public HashMap<String, String> itemize() {
 //        loadHGNC();
 //        loadGenotype();
 //        loadPhenotype();
         if (loadGenotype() && loadPhenotype()) {
             triplify();
         }
+        return this.omims;
     }
 
     /**

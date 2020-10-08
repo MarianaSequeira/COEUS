@@ -122,10 +122,16 @@ public class HGNCPlugin {
     {
         try
         {
+<<<<<<< HEAD
             for (Map.Entry<String, String[]> entry : OMIMPlugin.getOMIMs().entrySet()) {
                 String omimID = entry.getKey();
                 String geneNames = entry.getValue()[0];
                 String chromosomalLocation = entry.getValue()[1];
+=======
+            for (Map.Entry<String, String> entry : OMIMPlugin.getOMIMs().entrySet()) {
+                String omimID = entry.getKey();
+                String chromosomalLocation = entry.getValue();
+>>>>>>> f60e615c4bb997073019a6527f72a6c05a2ca036
 
                 com.hp.hpl.jena.rdf.model.Resource omim_item = api.getResource(PrefixFactory.getURIForPrefix(Config.getKeyPrefix()) + "omim_" + omimID);
 
@@ -133,10 +139,13 @@ public class HGNCPlugin {
 
                 if (relatedHGNC.isEmpty())
                 {
+<<<<<<< HEAD
                     relatedHGNC = this.findHGNCByApprovedSymbol(geneNames);
                 }
                 if (relatedHGNC.isEmpty())
                 {
+=======
+>>>>>>> f60e615c4bb997073019a6527f72a6c05a2ca036
                     relatedHGNC = this.findHGNCByChromosomalLocation(chromosomalLocation);
                 }
 
@@ -147,15 +156,23 @@ public class HGNCPlugin {
 
                     if (!hgnc.getLoaded())
                     {
+<<<<<<< HEAD
                         hgnci = this.itemizeResource(hgnc.getHgncID().split(":")[1], hgnc.getApprovedSymbol(), "hgnc_", "concept_HGNC");
 
                         // Itemize the uniprot value and all the resources that extens uniprof (Enzyme, Ensembl, etc.)
+=======
+                        hgnci = this.itemizeResource(hgnc.getHgncID(), hgnc.getApprovedSymbol(), "hgnc_", "concept_HGNC");
+
+>>>>>>> f60e615c4bb997073019a6527f72a6c05a2ca036
                         if(!hgnc.getUniprot().equals("")) 
                         {
                             uniproti = this.itemizeResource(hgnc.getUniprot(), hgnc.getUniprot(), "uniprot_", "concept_UniProt" );
                             this.uniprotRes.put(hgnc.getUniprot(), uniproti);
+<<<<<<< HEAD
                             
                             this.itemizeUniprotExtensions(hgnc, uniproti);
+=======
+>>>>>>> f60e615c4bb997073019a6527f72a6c05a2ca036
                         }
 
                         // Avoids itemize the same resource, over and over again.
@@ -240,6 +257,7 @@ public class HGNCPlugin {
 
     
     /*
+<<<<<<< HEAD
         Itemize the resources related with uniprot and stablish all existing associations.
     */
     private void itemizeUniprotExtensions(HGNC hgnc, com.hp.hpl.jena.rdf.model.Resource uniprot)
@@ -258,6 +276,8 @@ public class HGNCPlugin {
     
     
     /*
+=======
+>>>>>>> f60e615c4bb997073019a6527f72a6c05a2ca036
         Returns list of all HGNC objects that contains the OMIM ID specified.
     */
     private List<HGNC> findHGNCByOMIM(String omimID)
@@ -277,6 +297,7 @@ public class HGNCPlugin {
     /*
         Returns list of all HGNC objects that contains a gene with the ChromosomalLocation specified.
     */
+<<<<<<< HEAD
     private List<HGNC> findHGNCByApprovedSymbol(String geneNames)
     {
         List<HGNC> result = new ArrayList<>();
@@ -292,13 +313,19 @@ public class HGNCPlugin {
         return result;
     }
     
+=======
+>>>>>>> f60e615c4bb997073019a6527f72a6c05a2ca036
     private List<HGNC> findHGNCByChromosomalLocation(String chromosomalLocation)
     {
         List<HGNC> result = new ArrayList<>();
         
         for(HGNC hgnc : this.hgncs)
         {
+<<<<<<< HEAD
             if(hgnc.getChromosomes().equals(chromosomalLocation))
+=======
+            if(hgnc.getChromosomes().contains(chromosomalLocation))
+>>>>>>> f60e615c4bb997073019a6527f72a6c05a2ca036
             {
                 result.add(hgnc);
             }
