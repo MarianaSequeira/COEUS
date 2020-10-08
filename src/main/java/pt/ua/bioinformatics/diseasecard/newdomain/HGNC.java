@@ -70,19 +70,11 @@ public class HGNC {
         this.hgncID = hgncID;
     }
 
-<<<<<<< HEAD
     public String getChromosomes() {
         return chromosomes;
     }
 
     public void setChromosomes(String chromosomes) {
-=======
-    public List<String> getChromosomes() {
-        return chromosomes;
-    }
-
-    public void setChromosomes(List<String> chromosomes) {
->>>>>>> f60e615c4bb997073019a6527f72a6c05a2ca036
         this.chromosomes = chromosomes;
     }
 
