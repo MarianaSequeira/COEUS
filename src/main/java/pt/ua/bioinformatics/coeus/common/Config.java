@@ -37,7 +37,16 @@ public class Config {
     private static String path = "";
     private static String environment = "default";
     private static ArrayList<String> apikeys = new ArrayList<String>();
+    private static String dc_url = null;
 
+    public static String getDc_url() {
+        return dc_url;
+    }
+
+    public static void setDc_url(String dc_url) {
+        Config.dc_url = dc_url;
+    }
+    
     public static ArrayList<String> getApikeys() {
         return apikeys;
     }
@@ -196,6 +205,7 @@ public class Config {
                 apikeys.addAll(Arrays.asList(((String) config.get("apikey")).split("\\|")));
                 sdb = ((String) config.get("sdb"));//.replace(".ttl", "_" + environment + ".ttl");
                 keyPrefix = (String) config.get("keyprefix");
+                dc_url = (String) config.get("dc_url");
                 JSONObject prefixes = (JSONObject) file.get("prefixes");
                 for (Object o : prefixes.keySet()) {
                     String jo = (String) o;

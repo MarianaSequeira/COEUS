@@ -12,7 +12,8 @@
         "debug": true,
         "apikey":"coeus|uavr",
         "environment":"default",
-        "wizard":true
+        "wizard":true,
+        "dc_url":"http://localhost:8081/diseasecard/startup"
 },
 "prefixes" : {
         "coeus": "http://bioinformatics.ua.pt/coeus/resource/",
