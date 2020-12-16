@@ -1,5 +1,5 @@
 {
-    "$sdb:jdbcURL" : "jdbc:mysql://localhost:3306/diseasecard?autoReconnect=true",
+    "$sdb:jdbcURL" : "jdbc:mysql://container_mysql:3306/diseasecard?autoReconnect=true",
     "$sdb:sdbUser" : "diseasecard",
     "$sdb:sdbPassword" :"diseasecard",
 
