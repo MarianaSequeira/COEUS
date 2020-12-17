@@ -27,11 +27,10 @@ public class Worker implements Runnable{
     @Override
     public void run() {
         System.out.println("worker run call");
-        // Boot.build();
+        Boot.build();
+        
         // Send a message to DC - to let it know that it can start its internal process
         try {
-            
-            // TODO: inserir caminho no ficheiro de config
             HttpPost request = new HttpPost(Config.getDc_url());
             httpClient.execute(request);
             
