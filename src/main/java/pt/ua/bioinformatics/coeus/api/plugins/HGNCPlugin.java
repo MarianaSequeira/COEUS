@@ -62,7 +62,7 @@ public class HGNCPlugin {
     private boolean load()
     {
         boolean sucess = false;
-        File file = new File("/home/mariana/Documents/BOLSA/Extra/hgnc_data");
+        File file = new File("/usr/local/tomcat/datasets/hgnc_data");
         BufferedReader in;
         try 
         {

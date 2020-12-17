@@ -112,7 +112,7 @@ public class OMIMPlugin {
 //            BufferedReader in = new BufferedReader(new InputStreamReader(u.openStream()));
             
             
-            File file = new File("/home/mariana/Documents/BOLSA/Extra/genemap");
+            File file = new File("/usr/local/tomcat/datasets/genemap");
             BufferedReader in = new BufferedReader(new FileReader(file));
 
             CSVReader reader = new CSVReader(in, '|');
@@ -159,7 +159,7 @@ public class OMIMPlugin {
 //            BufferedReader in = new BufferedReader(new InputStreamReader(u.openStream()));
             
             
-            File file = new File("/home/mariana/Documents/BOLSA/Extra/morbidmap");
+            File file = new File("/usr/local/tomcat/datasets/morbidmap");
             BufferedReader in = new BufferedReader(new FileReader(file));
             
             CSVReader reader = new CSVReader(in, '|');
