@@ -5,7 +5,7 @@
     <groupId>pt.ua.bioinformatics</groupId>
     <artifactId>coeus</artifactId>
     <version>2.2</version>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
 
     <name>coeus</name>
 
