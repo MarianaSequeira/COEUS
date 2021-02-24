@@ -38,7 +38,17 @@ public class Config {
     private static String environment = "default";
     private static ArrayList<String> apikeys = new ArrayList<String>();
     private static String dc_url = null;
+    private static String sourceFilesLocation = null;
 
+    
+    public static String getSourceFilesLocation() {
+        return sourceFilesLocation;
+    }
+
+    public static void setSourceFilesLocation(String sourceFilesLocation) {
+        Config.sourceFilesLocation = sourceFilesLocation;
+    }
+    
     public static String getDc_url() {
         return dc_url;
     }
@@ -206,6 +216,8 @@ public class Config {
                 sdb = ((String) config.get("sdb"));//.replace(".ttl", "_" + environment + ".ttl");
                 keyPrefix = (String) config.get("keyprefix");
                 dc_url = (String) config.get("dc_url");
+                sourceFilesLocation = (String) config.get("sourceFilesLocation");
+                
                 JSONObject prefixes = (JSONObject) file.get("prefixes");
                 for (Object o : prefixes.keySet()) {
                     String jo = (String) o;

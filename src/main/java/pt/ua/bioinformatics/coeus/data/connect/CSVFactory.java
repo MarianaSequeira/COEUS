@@ -178,8 +178,15 @@ public class CSVFactory implements ResourceFactory {
         } else if (res.getMethod().equals("cache")) {
             try {
                 if (res.getExtendsConcept().equals(res.getIsResourceOf().getUri())) {
-                    u = new URL(res.getEndpoint());
+                    
+                    if ( res.getEndpoint().contains("sourceFilesLocation")) 
+                        u = new URL(Config.getSourceFilesLocation() + res.getEndpoint().replace("sourceFilesLocation", ""));
+                    else 
+                        u = new URL(res.getEndpoint());
+                    
+                    
                     in = new BufferedReader(new InputStreamReader(u.openStream()));
+                    
                     //try to guess the delimiter 
                     //if the resource query has no value apply defaults
                     if (res.getQuery() == null || res.getQuery().equals("")) {
