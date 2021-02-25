@@ -9,6 +9,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import pt.ua.bioinformatics.coeus.data.connect.CSVFactory;
+import pt.ua.bioinformatics.coeus.data.connect.CSVFactory_New;
 import pt.ua.bioinformatics.coeus.data.connect.LinkedDataFactory;
 import pt.ua.bioinformatics.coeus.data.connect.PluginFactory;
 import pt.ua.bioinformatics.coeus.data.connect.RDFFactory;
@@ -159,7 +160,7 @@ public class Builder {
         try {
             if (!r.isBuilt()) {
                 if (r.getPublisher().equalsIgnoreCase("csv")) {
-                    factory = new CSVFactory(r);
+                    factory = new CSVFactory_New(r);
                 } else if (r.getPublisher().equalsIgnoreCase("xml")) {
                     factory = new XMLFactory(r);
                 } else if (r.getPublisher().equalsIgnoreCase("sql")) {

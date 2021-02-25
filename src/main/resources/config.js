@@ -4,7 +4,7 @@
         "description": "Diseasecard: rare genetic diseases research portal",
         "keyprefix":"diseasecard",
         "version": "4.5",
-        "ontology": "http://bioinformatics.ua.pt/coeus/ontology/",
+        "ontology": "https://bioinformatics.ua.pt/coeus/ontology/",
         "setup": "setup_valid.rdf",
         "sdb":"sdb.ttl",
         "predicates":"predicates.csv",

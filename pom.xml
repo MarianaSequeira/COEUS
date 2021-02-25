@@ -148,6 +148,13 @@
             <artifactId>icu4j</artifactId>
             <version>67.1</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.univocity/univocity-parsers -->
+        <dependency>
+            <groupId>com.univocity</groupId>
+            <artifactId>univocity-parsers</artifactId>
+            <version>2.1.1</version>
+        </dependency>
+
 
     </dependencies>
 
