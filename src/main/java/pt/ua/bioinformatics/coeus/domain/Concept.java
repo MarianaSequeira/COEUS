@@ -41,6 +41,7 @@ public class Concept {
 
     public Concept(String uri) {
         this.uri = uri;
+        this.label = uri.substring(uri.lastIndexOf('/') + 1);
     }
 
     public String getUri() {

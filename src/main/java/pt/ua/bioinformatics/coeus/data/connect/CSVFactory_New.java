@@ -13,11 +13,16 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLEncoder;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import pt.ua.bioinformatics.coeus.api.API;
+import pt.ua.bioinformatics.coeus.api.ItemFactory;
 import pt.ua.bioinformatics.coeus.common.Boot;
 import pt.ua.bioinformatics.coeus.common.Config;
 import pt.ua.bioinformatics.coeus.data.Predicate;
@@ -39,23 +44,29 @@ public class CSVFactory_New implements ResourceFactory {
         this.res = res;
     }
     
-    private List<String[]> readEndpoint() throws MalformedURLException, IOException {
+    private List<String[]> readEndpoint() throws IOException {
         
         CsvParserSettings settings = new CsvParserSettings();
         settings.detectFormatAutomatically();
         CsvParser parser = new CsvParser(settings);
-        
-        // Read Local File
-        if (this.res.getEndpoint().contains("sourceFilesLocation"))
-        {
-            return parser.parseAll(new File(Config.getSourceFilesLocation() + this.res.getEndpoint().replace("sourceFilesLocation", "")));
+        try {
+            // Read Local File
+            if (this.res.getEndpoint().contains("sourceFilesLocation"))
+            {
+                return parser.parseAll(new File("/usr/local/tomcat/datasets/malacards_diseasecards_dump.csv"));
+            }
+            // Read Online File
+            else 
+            {
+                URL u = new URL(res.getEndpoint());
+                return parser.parseAll(new InputStreamReader(u.openStream()));
+            }
+        } catch (MalformedURLException ex) {
+            saveError(ex);
+            Logger.getLogger(CSVFactory_New.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("[COEUS][CSVFactory] Impossible to read the file.");
         }
-        // Read Online File
-        else 
-        {
-            URL u = new URL(res.getEndpoint());
-            return parser.parseAll(new InputStreamReader(u.openStream()));
-        }
+        return null;
     }
     
     
@@ -66,23 +77,53 @@ public class CSVFactory_New implements ResourceFactory {
         try {
             List<String[]> rows = readEndpoint();
             
+            HashMap<String, String> extensions;
+            if (res.getExtension().equals("")) extensions = res.getExtended();
+            else                               extensions = res.getExtended(res.getExtension());
             
-            HashMap<String, String> extensions = res.getExtended();
+            InheritedResource resKey = (InheritedResource) res.getHasKey();
+            //System.out.println(resKey.toString());
             
-            for (String item : extensions.keySet()) 
+            for ( String itemRaw : extensions.keySet() )
             {
-                rdfizer = new Triplify(res, extensions.get(item));
-                InheritedResource key = (InheritedResource) res.getHasKey();
-                for (String[] entry : rows) {
-                    int column = Integer.parseInt(key.getQuery());
-                    rdfizer.getMap().add(entry[column]);
+                String item = ItemFactory.getTokenFromItem(itemRaw);
+                //System.out.println("ItemRaw: " + itemRaw + "| Item: " + item);
+                
+                for (String[] r : rows) 
+                {
+                    //System.out.println(Arrays.toString(r));
+                    //System.out.println(resKey.getRegex());
+                    
+                    if ( r[Integer.parseInt(resKey.getRegex())].equals(item) ) 
+                    {
+                        //System.out.println("EXTENSIONS.GET(itemRaw) = " + extensions.get(itemRaw));
+                        rdfizer = new Triplify(res, extensions.get(itemRaw));
+                        
+                        //System.out.println("RES.GETLOADSFROM() = " + res.getLoadsFrom().toString());
+                        
+                        for (Object o : res.getLoadsFrom()) {
+                            InheritedResource c = (InheritedResource) o;
+                            String[] tmp = c.getProperty().split("\\|");
+                            for (String inside : tmp) {
+                                int col = Integer.parseInt(c.getQuery());
+                                //System.out.println("INSIDE: " + inside + " | R(COL): " + r[col]);
+                                rdfizer.add(inside, r[col]);
+                            }
+                        }
+                        rdfizer.itemize(r[Integer.parseInt(resKey.getQuery())]);
+                        
+                        break;
+                    }
+                    
                 }
-                rdfizer.map();
             }
+            
+            
             
         } catch (IOException ex) {
             saveError(ex);
             Logger.getLogger(CSVFactory_New.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("[COEUS][CSVFactory] Impossible to read the information.");
         }
         
         
